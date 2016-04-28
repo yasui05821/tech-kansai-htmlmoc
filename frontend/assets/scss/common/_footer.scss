@@ -1,0 +1,88 @@
+#footer .search {
+  .title {
+    text-align: center;
+  }
+  .byArticle {
+    background-color: #626262;
+      .title {
+        background-color: #626262;
+        color: white;
+      }
+      .form {
+        background-color: #777777;
+        border: 1px solid white;
+        border-radius: 17px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      input {
+        background-color: #777777;
+        width: 80%;
+        margin-left: 12%;
+      }
+
+  }
+  .byCategory {
+    background-color: #6B6B6B;
+      .title {
+        background-color: #6B6B6B;
+        color: #CCCCCC;
+      }
+      .programing, .design, .thinking {
+        border-radius: 5px;
+      }
+      .programing {
+        background: #4AB1BD;
+        color: white;
+      }
+      .design {
+        background: #DC8692;
+        color: white;
+      }
+      .thinking {
+          background: #9997CB;
+          color: white;
+        }
+  }
+
+  .byTag {
+    background-color: #626262;
+      .title {
+        background-color: #626262;
+        color: #CCCCCC;
+      }
+      .tag {
+        background-color: #626262;
+        color: #ECA443;
+        //display: inline-block;
+      }
+
+  }
+  .byCommunity {
+    background-color: #6B6B6B;
+      .title {
+        background-color: #6B6B6B;
+        color: #CCCCCC;
+      }
+
+  }
+}
+
+#footer .contact {
+  text-align: center;
+  color: #777777;
+    .contactBtn {
+      margin-right: auto;
+      margin-left: auto;
+      border: 1px solid #777777;
+      border-radius: 17px;
+      width: 50%;
+    }
+}
+
+#footer .copyright {
+  text-align: center;
+  background-color: #D68D31;
+  color: white;
+}

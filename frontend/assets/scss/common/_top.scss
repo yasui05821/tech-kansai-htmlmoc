@@ -1,0 +1,69 @@
+#top {
+
+  .description {
+    text-align: center;
+    color: #584E47;
+  }
+
+  .contents {
+    //border: none;
+    .tech {
+      width: 50%;
+      float: left;
+      border: none;
+    }
+    .newcomer {
+      width: 50%;
+      float: right;
+      border: none;
+    }
+    .blog {
+      width: 50%;
+      float: left;
+      border: none;
+    }
+    .community {
+      width: 50%;
+      float: right;
+      border: none;
+    }
+
+
+    //ul {
+      //list-style: none;
+      //padding: 0;
+      //margin: 0;
+      //border: none;
+    //}
+
+    //ul div {
+      //border: none;
+    //  width: 50%;
+    //}
+  }
+}
+
+
+#top .contents {
+  //li {
+    color: white;
+  //}
+
+  .tech {
+    background-color: #ECA443;
+  }
+  .newcomer {
+    background-color: #6FB0A0;
+  }
+  .blog {
+    background-color: #5197C8;
+
+  }
+  .community {
+    background-color: #8A7B6E;
+
+  }
+
+
+}
+

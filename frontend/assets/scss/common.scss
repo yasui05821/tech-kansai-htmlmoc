@@ -1,5 +1,16 @@
-$color: blue;
+@mixin white {
+  background-color: white;
+  border: 1px solid black;
+}
 
 *{
-  color:$color;
+  p, i, li, div, img {
+    @include white
+  }
 }
+
+@import "common/header";
+@import "common/top";
+@import "common/newArticle";
+@import "common/footer";
+
