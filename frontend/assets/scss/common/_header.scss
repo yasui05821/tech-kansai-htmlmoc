@@ -1,7 +1,20 @@
 #header {
-  p, i {
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+  .title, i {
     display: inline-block;
+  }
+  .title {
+    float: left;
     color: #777777;
+    font-size: 1.1em;
+  }
+  i {
+    float: right;
+    color: #CDCDCD;
   }
 
 }
