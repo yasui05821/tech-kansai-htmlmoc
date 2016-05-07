@@ -11,7 +11,7 @@
 #newArticle .article {
   clear: both;
   h1 {
-    @include blog-h1
+    @include thumbnail-title
   }
   .picture {
     float: left;

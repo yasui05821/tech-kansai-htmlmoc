@@ -1,5 +1,14 @@
+$prog-color: #4AB1BD;
+$design-color: #DC8692;
+$thinking-color: #9997CB;
+
+
+#footer {
+  clear: both;
+}
+
 #footer .search {
-  .title {
+  h1, h2 {
     text-align: center;
   }
   h1 {
@@ -8,51 +17,90 @@
   h2 {
     @include h2
   }
-  .byArticle {
-    background-color: #626262;
-    .title {
-      background-color: #626262;
-      color: white;
-    }
-    .form {
-      background-color: #777777;
-      border: 1px solid white;
-      border-radius: 17px;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    input {
-      background-color: #777777;
-      width: 80%;
-      margin-left: 12%;
-    }
+}
 
+#footer .search .byArticle {
+  background-color: #626262;
+  .title {
+    background-color: #626262;
+    color: white;
   }
-  .byCategory {
+  .fa-search {
+    margin-left: 1em;
+    color: #CDCDCD;
+  }
+  .form {
+    background-color: #777777;
+    border: 1px solid white;
+    border-radius: 17px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input {
+    background-color: #777777;
+    width: 80%;
+    margin-left: 0;
+  }
+}
+
+#footer .search .byCategory {
     background-color: #6B6B6B;
     .title {
       background-color: #6B6B6B;
       color: #CCCCCC;
     }
-    .programing, .design, .thinking {
-      border-radius: 5px;
+    .btn-left, .btn-right {
+      display: inline-block;
     }
-    .programing {
-      background: #4AB1BD;
+    i, p {
+      display: inline-block;
+    }
+
+    .btn-left {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      width: 70%;
       color: white;
+    }
+    .btn-right {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      width: 12%;
+      margin-left: 0;
+    }
+
+    .programing {
+      .btn-left {
+        background: $prog-color;
+      }
+      .btn-right {
+        background-color: #CEF3F7;
+        color: $prog-color;
+      }
     }
     .design {
-      background: #DC8692;
-      color: white;
+      .btn-left {
+        background: $design-color;
+      }
+      .btn-right {
+        background-color: #FCEEF0;
+        color: $design-color;
+      }
     }
     .thinking {
-      background: #9997CB;
-      color: white;
-    }
-  }
+      .btn-left {
+        background: $thinking-color;
+      }
+      .btn-right {
+        background-color: #F1F0FF;
+        color: $thinking-color;
+      }
 
-  .byTag {
+    }
+}
+
+#footer .search .byTag {
     background-color: #626262;
     .title {
       background-color: #626262;
@@ -63,14 +111,12 @@
       color: #ECA443;
       //display: inline-block;
     }
-
   }
-  .byCommunity {
+
+#footer .search .byCommunity {
     background-color: #6B6B6B;
     .title {
       background-color: #6B6B6B;
       color: #CCCCCC;
     }
-
-  }
 }
