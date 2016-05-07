@@ -1,16 +1,16 @@
-@mixin white {
-  background-color: white;
+@mixin block {
+  //background-color: white;
   border: 1px solid black;
 }
 
 *{
-  p, i, li, div, img {
-    @include white
+  h1,h2, p, i, li, div, img {
+    @include block
   }
 }
 
-@import "common/header";
-@import "common/top";
-@import "common/newArticle";
-@import "common/footer";
+@import "common/_header";
+@import "common/_top";
+@import "common/_newArticle";
+@import "common/_footer";
 

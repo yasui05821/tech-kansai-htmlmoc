@@ -1,4 +1,30 @@
+@import "common/_mixin";
+
 #newArticle .header {
   clear: both;
   text-align: center;
+    h1 {
+      @include h1
+    }
+}
+
+#newArticle .article {
+  clear: both;
+  h1 {
+    @include blog-h1
+  }
+  .picture {
+    float: left;
+    margin: 0.5em;
+  }
+  .icon {
+    float: left;
+    margin-right: 0.5em;
+  }
+}
+
+#newArticle .article {
+  .date {
+    color: #777777;
+  }
 }

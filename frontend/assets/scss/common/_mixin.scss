@@ -1,0 +1,15 @@
+@mixin blog-h1 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+@mixin h1 {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+@mixin h2 {
+  font-size: 1.1em;
+  font-weight: normal;
+}
