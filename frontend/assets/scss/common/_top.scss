@@ -1,37 +1,18 @@
-@mixin contents-left {
-  width: 50%;
-  float: left;
-  border: none;
-}
-@mixin contents-right {
-  width: 50%;
-  float: right;
-  border: none;
-}
-@mixin bgc-tech {
-  background-color: #ECA443;
-}
-@mixin bgc-newcomer {
-  background-color: #6FB0A0;
-}
-@mixin bgc-blog {
-  background-color: #5197C8;
-}
-@mixin bgc-community {
-  background-color: #8A7B6E;
-}
-
+@import "common/_mixin";
 
 #top {
+  @include clearfix;
   .description {
     text-align: center;
   }
   .contents {
     .tech, .blog {
-      @include contents-left
+      @include block-left;
+      width: 50%;
     }
     .newcomer, .community {
-      @include contents-right
+      @include block-right;
+      width: 50%;
     }
     p {
       width: 50%;
