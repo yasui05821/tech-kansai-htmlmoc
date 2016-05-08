@@ -1,9 +1,9 @@
-@mixin block {
-  //background-color: white;
-  border: 1px solid black;
-}
+@import "common/_mixin";
 
 *{
+  @include font-size;
+  @include font-style;
+
   h1,h2, p, i, li, div, img {
     //@include block
     margin: 0;
