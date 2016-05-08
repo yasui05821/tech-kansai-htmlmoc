@@ -1,13 +1,13 @@
-$prog-color: #4AB1BD;
-$design-color: #DC8692;
-$thinking-color: #9997CB;
-
+@import "common/_mixin";
 
 #footer {
   clear: both;
 }
 
 #footer .search {
+  .byArticle, .byCategory, .byTag, .byCommunity {
+    @include clearfix
+  }
   h1, h2 {
     text-align: center;
   }
@@ -20,9 +20,8 @@ $thinking-color: #9997CB;
 }
 
 #footer .search .byArticle {
-  background-color: #626262;
+  @include bgc-dark;
   .title {
-    background-color: #626262;
     color: white;
   }
   .fa-search {
@@ -45,78 +44,87 @@ $thinking-color: #9997CB;
 }
 
 #footer .search .byCategory {
-    background-color: #6B6B6B;
-    .title {
-      background-color: #6B6B6B;
-      color: #CCCCCC;
-    }
-    .btn-left, .btn-right {
-      display: inline-block;
-    }
-    i, p {
-      display: inline-block;
-    }
-
+  @include bgc-bright;
+  .title {
+    color: #CCCCCC;
+  }
+  .btn-left, .btn-right {
+    float: left;
+  }
+  .btn-left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 70%;
+    color: white;
+      i, p {
+        display: inline-block;
+      }
+  }
+  .btn-right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 12%;
+    margin-left: 0;
+  }
+  .programing {
     .btn-left {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      width: 70%;
-      color: white;
+      background: $prog-color;
     }
     .btn-right {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      width: 12%;
-      margin-left: 0;
+      background-color: #CEF3F7;
+      color: $prog-color;
     }
-
-    .programing {
-      .btn-left {
-        background: $prog-color;
-      }
-      .btn-right {
-        background-color: #CEF3F7;
-        color: $prog-color;
-      }
+  }
+  .design {
+    .btn-left {
+      background: $design-color;
     }
-    .design {
-      .btn-left {
-        background: $design-color;
-      }
-      .btn-right {
-        background-color: #FCEEF0;
-        color: $design-color;
-      }
+    .btn-right {
+      background-color: #FCEEF0;
+      color: $design-color;
     }
-    .thinking {
-      .btn-left {
-        background: $thinking-color;
-      }
-      .btn-right {
-        background-color: #F1F0FF;
-        color: $thinking-color;
-      }
-
+  }
+  .thinking {
+    .btn-left {
+      background: $thinking-color;
     }
+    .btn-right {
+      background-color: #F1F0FF;
+      color: $thinking-color;
+    }
+  }
 }
 
 #footer .search .byTag {
-    background-color: #626262;
-    .title {
-      background-color: #626262;
-      color: #CCCCCC;
-    }
-    .tag {
-      background-color: #626262;
-      color: #ECA443;
-      //display: inline-block;
-    }
+  @include bgc-dark;
+  clear: both;
+  .title {
+    color: #CCCCCC;
   }
+  .line {
+    text-align: center;
+  }
+  .tag {
+    color: #ECA443;
+  }
+}
 
 #footer .search .byCommunity {
-    background-color: #6B6B6B;
-    .title {
-      background-color: #6B6B6B;
-      color: #CCCCCC;
-    }
+  @include bgc-bright;
+  .title {
+    color: #CCCCCC;
+  }
+  .community {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 49%;
+  }
+  .left {
+    @include block-left
+  }
+  .right {
+    @include block-right
+  }
 }
