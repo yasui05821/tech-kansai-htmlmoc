@@ -1,15 +1,14 @@
 @import "common/_mixin";
 
 #newArticle .header {
-  clear: both;
   text-align: center;
-    h1 {
-      @include h1
-    }
+  h1 {
+    @include h1
+  }
 }
 
 #newArticle .article {
-  clear: both;
+  @include clearfix;
   h1 {
     @include thumbnail-title
   }
@@ -24,6 +23,9 @@
 }
 
 #newArticle .article {
+  &:nth-child(even) {
+    border: 1px solid #CDCDCD;
+  }
   .date {
     color: #777777;
   }
