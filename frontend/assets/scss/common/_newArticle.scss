@@ -13,11 +13,22 @@
     @include thumbnail-title
   }
   .picture {
+    //position: relative;
     float: left;
     margin: 0.5em;
   }
+  .label {
+    position: absolute;
+    //left: 0.5em+1px;
+    width: 0;
+    height: 0;
+    border: 17px solid transparent;
+    border-top: 17px solid $prog-color;
+    border-left: 17px solid $prog-color;
+  }
   .icon {
     float: left;
+    border-radius: 15px;
     margin-right: 0.5em;
   }
 }
