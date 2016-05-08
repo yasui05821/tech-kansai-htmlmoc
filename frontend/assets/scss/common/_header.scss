@@ -1,9 +1,7 @@
+@import "common/_mixin";
+
 #header {
-  &:after {
-    clear: both;
-    display: block;
-    content: '';
-  }
+  @include clearfix;
   .title, i {
     display: inline-block;
   }
