@@ -1,11 +1,15 @@
 #footer .contact {
+  clear: both;
   text-align: center;
+  background-image: url("../../image/bg.png");
   color: #777777;
-  .contactBtn {
-    margin-right: auto;
-    margin-left: auto;
-    border: 1px solid #777777;
-    border-radius: 17px;
-    width: 50%;
-  }
+  height: 200px;  
+    .contactBtn {
+      margin-right: auto;
+      margin-left: auto;
+      border: 1px solid #777777;
+      border-radius: 17px;
+      width: 50%;
+      background-color: white;
+    }
 }
