@@ -28,7 +28,48 @@
     content: '';
   }
 }
-// フォントサイズ
+// 色
+$link-color: #ECA443;
+$hr-color: #ECEDEE;
+$tableTitle-color: #FAF8F5;
+$blockquote-color: #F5F6F7;
+$quotation-color: #D6D7D8;
+$endline-color: #F0EAE2;
+
+$blog-h2: #EBE3DA;
+$blog-h3: #E6DCD0;
+$blog-h4: #E1D6C6;
+$blog-list: #D7C8B3;
+
+$prog-color: #4AB1BD;
+$design-color: #DC8692;
+$thinking-color: #9997CB;
+
+$twcolor-dark: #5FADEE;
+$twcolor-bright: #C6DDF1;
+$twcolor-shadow: #4287C0;
+
+$fbcolor-dark: #325A9A;
+$fbcolor-bright: #BBCBE7;
+$fbcolor-shadow: #204378;
+
+$hbcolor-dark: #2184DE;
+$hbcolor-bright: #A5B9CA;
+$hbcolor-shadow: #1761A2;
+
+@mixin bgc-tech {
+  background-color: #ECA443;
+}
+@mixin bgc-newcomer {
+  background-color: #6FB0A0;
+}
+@mixin bgc-blog {
+  background-color: #5197C8;
+}
+@mixin bgc-community {
+  background-color: #8A7B6E;
+}
+// タグ
 @mixin thumbnail-title {
   margin: 0;
   font-size: 1em;
@@ -42,29 +83,63 @@
   font-size: 1em;
   font-weight: normal;
 }
-// 色
-@mixin bgc-tech {
-  background-color: #ECA443;
+@mixin blog-h1 {
+  
 }
-@mixin bgc-newcomer {
-  background-color: #6FB0A0;
+@mixin blog-h2 {
+  background-color: $blog-h2;
 }
-@mixin bgc-blog {
-  background-color: #5197C8;
+@mixin blog-h3 {
+  border-bottom: 3px solid $blog-h3;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
 }
-@mixin bgc-community {
-  background-color: #8A7B6E;
+@mixin blog-h4 {
+  border-left: 3px solid #E1D6C6;
+  margin-left: 2%;
 }
-$prog-color: #4AB1BD;
-$design-color: #DC8692;
-$thinking-color: #9997CB;
-// 部品
+@mixin list {
+  list-style-type: square;
+  color: $blog-list;
+  span {
+    color: black;
+  }
+}
+@mixin a-color {
+  color: $link-color;
+}
+@mixin hr {
+  border: 1px solid $hr-color;
+  width: 92%;
+}
+@mixin blockquote {
+  background-color: $blockquote-color;
+  border-radius: 4px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// その他部品
 @mixin icon {
   border-radius: 15px;
   margin-right: 0.5em;
 }
-@mixin block {
-  border: 1px solid black;
+@mixin icon-custom($radius) {
+  border-radius: $radius + px;
+}
+@mixin sns-cube($color) {
+  float: left;
+  color: $color;
+  border: 1px solid $color;
+  border-radius: 2px;
+}
+@mixin shadow-box($bgc-color, $color, $shadow-color) {
+  color: $color;
+  background-color: $bgc-color;
+  border-radius: 2px;
+  box-shadow: 0 2px $shadow-color;
 }
 @mixin bgc-bright($value) {
   @include height($value);
@@ -90,3 +165,18 @@ $thinking-color: #9997CB;
   );
   background-size: 4px 4px;
 }
+@mixin table {
+  table, td, th {
+    border: 1px solid #CDCDCD;
+    border-collapse: collapse;
+  }
+  thead {
+    background-color: $tableTitle-color;
+  }
+}
+
+
+@mixin block {
+  border: 1px solid black;
+}
+
