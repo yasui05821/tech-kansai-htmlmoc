@@ -1,9 +1,5 @@
 @import "common/_mixin";
 
-//#newArticle {
-//  @include height(0.25);
-//}
-
 #newArticle .header {
   @include height(0.04);
   text-align: center;
@@ -34,8 +30,7 @@
   }
   .icon {
     float: left;
-    border-radius: 15px;
-    margin-right: 0.5em;
+    @include icon;
   }
 }
 
