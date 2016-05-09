@@ -1,6 +1,11 @@
 @import "common/_mixin";
 
 #blog .content {
+  .picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .blog-h2 {
     @include blog-h2;
   }
@@ -9,6 +14,9 @@
   }
   .blog-h4 {
     @include blog-h4;
+  }
+  .strong {
+    @include strong;
   }
   .list {
     @include list;

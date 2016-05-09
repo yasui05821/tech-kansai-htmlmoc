@@ -141,6 +141,24 @@ $hbcolor-shadow: #1761A2;
   border-radius: 2px;
   box-shadow: 0 2px $shadow-color;
 }
+@mixin stripe ($bright, $dark){
+  height: auto;
+  width: auto;
+  background-image: linear-gradient(
+                  -45deg,
+                  $bright 25%,
+                  $dark 25%, $dark 50%,
+                  $bright 50%, $bright 75%,
+                  $dark 75%, $dark
+  );
+  background-size: 4px 4px;
+}
+@mixin strong {
+  @include stripe(#FFFEFC, #FDE5A2);
+  display: inline-block;
+  padding: 0.1em 0.2em;
+  font-weight: normal;
+}
 @mixin bgc-bright($value) {
   @include height($value);
   width: auto;
