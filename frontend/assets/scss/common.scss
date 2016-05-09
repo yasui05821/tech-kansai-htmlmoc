@@ -5,13 +5,13 @@
   @include font-style;
 
   h1,h2, p, i, li, div, img {
-    //@include block
+    //@include block;
     margin: 0;
   }
 }
 
 @import "common/_header";
-@import "common/_top";
+@import "top/top";
 @import "common/_newArticle";
 @import "common/_footer";
 
