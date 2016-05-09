@@ -1,7 +1,7 @@
 @import "common/_mixin";
 
 *{
-  @include font-size;
+  //@include font-size;
   @include font-style;
 
   h1,h2, p, i, li, div, img {
