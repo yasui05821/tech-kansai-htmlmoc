@@ -98,7 +98,6 @@
 }
 
 #footer .search .byTag {
-  //@include height(0.07);
   @include bgc-dark(0.075);
   clear: both;
   .title {
@@ -108,7 +107,7 @@
     text-align: center;
   }
   .tag {
-    color: #ECA443;
+    @include a-color;
   }
 }
 
