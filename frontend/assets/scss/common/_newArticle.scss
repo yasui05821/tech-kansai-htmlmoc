@@ -11,7 +11,7 @@
 #newArticle .article {
   @include height(0.052);
   @include clearfix;
-  h1 {
+  .thumbnail-title {
     @include thumbnail-title
   }
   .picture {
