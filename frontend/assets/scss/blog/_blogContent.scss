@@ -1,0 +1,36 @@
+@import "common/_mixin";
+
+#blog .content {
+  .blog-h2 {
+    @include blog-h2;
+  }
+  .blog-h3 {
+    @include blog-h3;
+  }
+  .blog-h4 {
+    @include blog-h4;
+  }
+  .list {
+    @include list;
+  }
+  .table {
+    @include table;
+  }
+  .link {
+    @include a-color;
+  }
+  .horizon {
+    @include hr;
+  }
+  .blockquote {
+    @include clearfix;
+    @include blockquote;
+  }
+  .blockquote .quotation{
+    color: $quotation-color;
+  }
+  .endline {
+    text-align: center;
+    color: $endline-color;
+  }
+}

@@ -1,0 +1,59 @@
+@import "common/_mixin";
+
+
+#blog .footer {
+  .tags {
+    .tag {
+      @include a-color;
+    }
+  }
+  .community {
+    color: white;
+    background-color: $link-color;
+    display: inline-block;
+  }
+  .writer-profile {
+    //@include clearfix;
+    border: 1px solid #CDCDCD;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    .title {
+      background-color: #ECEDEE;
+      border-bottom: 1px solid #CDCDCD;
+    }
+    .icon {
+      float: left;
+      @include icon-custom(30)
+    }
+    .sns {
+      @include clearfix;
+      .twitter {
+        @include sns-cube($twcolor-dark);
+      }
+      .facebook {
+        @include sns-cube($fbcolor-dark);
+      }
+    }
+  }
+  .push-sns {
+    @include clearfix;
+    .twitter, .facebook, .hatebu {
+      float: left;
+      width: 28%;
+      color: white;
+    }
+    .twitter {
+      @include shadow-box($twcolor-dark, white, $twcolor-shadow);
+    }
+    .facebook {
+      @include shadow-box($fbcolor-dark, white, $fbcolor-shadow);
+    }
+    .hatebu {
+      @include shadow-box($hbcolor-dark, white, $hbcolor-shadow);
+    }
+    p {
+      display: inline-block;
+    }
+  }
+}

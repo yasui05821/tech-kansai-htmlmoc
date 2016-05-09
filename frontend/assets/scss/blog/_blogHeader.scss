@@ -1,0 +1,49 @@
+@import "common/_mixin";
+
+#blog .header {
+  .info {
+    @include clearfix;
+    .date, .icon {
+      float: left;
+    }
+    .icon {
+      @include icon
+    }
+  }
+  .sns {
+    @include clearfix;
+    .twitter, .facebook, .hatebu {
+      float: left;
+    }
+    .snsbtn-left, .snsbtn-right {
+      float: left;
+    }
+    .snsbtn-left {
+      p {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+#blog .header .sns {
+  color: white;
+  .twitter .snsbtn-right {
+    background-color: $twcolor-bright;
+  }
+  .facebook .snsbtn-right {
+    background-color: $fbcolor-bright;
+  }
+  .hatebu .snsbtn-right {
+    background-color: $hbcolor-bright;
+  }
+  .twitter .snsbtn-left {
+    background-color: $twcolor-dark;
+  }
+  .facebook .snsbtn-left {
+    background-color: $fbcolor-dark;
+  }
+  .hatebu .snsbtn-left {
+    background-color: $hbcolor-dark;
+  }
+}
