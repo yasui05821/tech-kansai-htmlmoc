@@ -1,6 +1,7 @@
 @import "common/_mixin";
 
 #header {
+  @include height(0.025);
   @include clearfix;
   .title, i {
     display: inline-block;

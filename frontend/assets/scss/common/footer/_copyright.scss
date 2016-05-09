@@ -1,4 +1,5 @@
 #footer .copyright {
+  @include height(0.01);
   text-align: center;
   background-color: #D68D31;
   color: white;

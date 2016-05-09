@@ -1,3 +1,9 @@
+@mixin height($value) {
+  height: $value * 2000px;
+}
+@mixin width ($value) {
+  width: $value * 100%;
+}
 // ブロックごとの枠線
 @mixin block {
   border: 1px solid black;
@@ -55,9 +61,9 @@
   background-color: #8A7B6E;
 }
 //searchの背景
-@mixin bgc-bright {
+@mixin bgc-bright($value) {
+  @include height($value);
   width: auto;
-  height: auto;
   background-image: linear-gradient(
     -45deg,
     #6B6B6B 25%,
@@ -67,9 +73,9 @@
   );
   background-size: 4px 4px;
 }
-@mixin bgc-dark {
+@mixin bgc-dark($value) {
+  @include height($value);
   width: auto;
-  height: auto;
   background-image: linear-gradient(
     -45deg,
     #626262 25%,

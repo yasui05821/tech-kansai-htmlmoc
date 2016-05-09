@@ -1,9 +1,11 @@
 #footer .contact {
+  @include height(0.078);
   clear: both;
   text-align: center;
   background-image: url("../../image/bg.png");
+  background-size: 47% auto;
+  background-position: 50% 200%;
   color: #777777;
-  height: 200px;  
     .contactBtn {
       margin-right: auto;
       margin-left: auto;

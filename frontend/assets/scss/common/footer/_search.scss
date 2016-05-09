@@ -20,7 +20,8 @@
 }
 
 #footer .search .byArticle {
-  @include bgc-dark;
+  //@include height(0.07);
+  @include bgc-dark(0.07);
   .title {
     color: white;
   }
@@ -44,7 +45,8 @@
 }
 
 #footer .search .byCategory {
-  @include bgc-bright;
+  //@include height(0.14);
+  @include bgc-bright(0.12);
   .title {
     color: #CCCCCC;
   }
@@ -96,7 +98,8 @@
 }
 
 #footer .search .byTag {
-  @include bgc-dark;
+  //@include height(0.07);
+  @include bgc-dark(0.075);
   clear: both;
   .title {
     color: #CCCCCC;
@@ -110,7 +113,8 @@
 }
 
 #footer .search .byCommunity {
-  @include bgc-bright;
+  //@include height(0.14);
+  @include bgc-bright(0.145);
   .title {
     color: #CCCCCC;
   }

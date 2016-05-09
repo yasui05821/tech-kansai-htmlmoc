@@ -3,9 +3,14 @@
 #top {
   @include clearfix;
   .description {
+    @include height(0.113);
     text-align: center;
   }
   .contents {
+    @include height(0.114);
+    .content {
+      height: 50%;
+    }
     .tech, .blog {
       @include block-left;
       width: 50%;
