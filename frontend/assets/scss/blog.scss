@@ -4,13 +4,14 @@
   //@include font-size;
   @include font-style;
 
-  h1,h2, p, i, li, div, img, strong, a {
+  h1,h2,h3, h4, p, i, li, div, img, strong, a {
     //@include block;
     margin: 0;
   }
-  p {
-    @include font-size(1.5);
-  }
+  //p {
+  //  @include font-size(1.4);
+  //  @include line-height(2.1);
+  //}
 }
 
 @import "common/_header";
