@@ -8,9 +8,12 @@
     }
   }
   .community {
-    color: white;
-    background-color: $link-color;
-    display: inline-block;
+    p {
+      border-radius: 3px;
+      display: inline-block;
+      color: white;
+      background-color: $link-color;
+    }
   }
   .writer-profile {
     //@include clearfix;
@@ -39,9 +42,13 @@
   .push-sns {
     @include clearfix;
     .twitter, .facebook, .hatebu {
+      @include height(0.019);
       float: left;
-      width: 28%;
+      width: 31%;
       color: white;
+    }
+    .twitter, .facebook {
+      margin-right: 3%;
     }
     .twitter {
       @include shadow-box($twcolor-dark, white, $twcolor-shadow);
