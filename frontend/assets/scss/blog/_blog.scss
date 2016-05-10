@@ -1,3 +1,20 @@
+@import "../common/_mixin";
 @import "_blogHeader";
 @import "_blogContent";
 @import "_blogFooter";
+
+#blog .header {
+    .title, .info, .sns {
+      @include blog-width;
+    }
+}
+#blog .content {
+    .blog-h2, .blog-h3, .blog-h4, p, .table, .list {
+      @include blog-width;
+    }
+}
+#blog .footer {
+    .tags, .community, .push-sns {
+      @include blog-width;
+    }
+}
