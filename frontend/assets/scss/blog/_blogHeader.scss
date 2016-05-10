@@ -1,4 +1,4 @@
-@import "common/_mixin";
+@import "../common/_mixin";
 
 #blog .header {
   .info {
@@ -13,11 +13,10 @@
   }
   .sns {
     @include clearfix;
-    @include height(0.015);
     .twitter, .facebook, .hatebu {
       @include height(0.008);
       float: left;
-      margin: 0.5em 0.5em 0.5em 0;
+      margin-right: 0.5em;
     }
     .snsbtn-left, .snsbtn-right {
       float: left;
