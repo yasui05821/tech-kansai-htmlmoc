@@ -2,8 +2,13 @@
 @mixin height($value) {
   height: $value * 2000px;
 }
-@mixin width ($value) {
-  width: $value * 100%;
+//@mixin width ($value) {
+//  width: $value * 100%;
+//}
+@mixin blog-width  {
+  width: 96% ;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 // 初期設定
 @mixin font-size {
@@ -91,13 +96,10 @@ $hbcolor-shadow: #1761A2;
 }
 @mixin blog-h3 {
   border-bottom: 3px solid $blog-h3;
-  width: 96%;
-  margin-left: auto;
-  margin-right: auto;
 }
 @mixin blog-h4 {
   border-left: 3px solid #E1D6C6;
-  margin-left: 2%;
+  //margin-left: 2%;
 }
 @mixin list {
   list-style-type: square;
@@ -184,6 +186,10 @@ $hbcolor-shadow: #1761A2;
   background-size: 4px 4px;
 }
 @mixin table {
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
   table, td, th {
     border: 1px solid #CDCDCD;
     border-collapse: collapse;
