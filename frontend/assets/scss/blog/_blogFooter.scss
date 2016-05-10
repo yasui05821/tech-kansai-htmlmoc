@@ -17,6 +17,7 @@
   }
   .writer-profile {
     //@include clearfix;
+    @include height(0.065);
     border: 1px solid #CDCDCD;
     width: 90%;
     margin-left: auto;
@@ -46,9 +47,15 @@
       float: left;
       width: 31%;
       color: white;
+      p {
+        @include font-size(0.9);
+      }
     }
     .twitter, .facebook {
       margin-right: 3%;
+    }
+    .twitter-icon, .facebook-icon, .hatebu-icon {
+      @include reduction-onHeight(0.009);
     }
     .twitter {
       @include shadow-box($twcolor-dark, white, $twcolor-shadow);

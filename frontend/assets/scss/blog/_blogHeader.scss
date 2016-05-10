@@ -1,6 +1,9 @@
 @import "../common/_mixin";
 
 #blog .header {
+  .blog-h1 {
+    @include blog-h1;
+  }
   .info {
     @include clearfix;
     @include height(0.025);
@@ -18,9 +21,15 @@
       float: left;
       margin-right: 0.5em;
     }
+    .twitter-icon, .facebook-icon, .hatebu-icon {
+      @include reduction-onHeight(0.004);
+    }
     .snsbtn-left, .snsbtn-right {
       float: left;
       height: 100%;
+      p {
+        @include font-size(0.4);
+      }
     }
     .snsbtn-left {
       p {

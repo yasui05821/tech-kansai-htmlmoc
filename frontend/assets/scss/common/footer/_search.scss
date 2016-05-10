@@ -30,6 +30,7 @@
     color: #CDCDCD;
   }
   .form {
+    @include height(0.02);
     background-color: #777777;
     border: 1px solid white;
     border-radius: 17px;
@@ -69,30 +70,39 @@
     margin-left: 0;
   }
   .programing {
+    @include height(0.02);
     .btn-left {
       background: $prog-color;
+      height: 100%;
     }
     .btn-right {
       background-color: #CEF3F7;
       color: $prog-color;
+      height: 100%;
     }
   }
   .design {
+    @include height(0.02);
     .btn-left {
       background: $design-color;
+      height: 100%;
     }
     .btn-right {
       background-color: #FCEEF0;
       color: $design-color;
+      height: 100%;
     }
   }
   .thinking {
+    @include height(0.02);
     .btn-left {
       background: $thinking-color;
+      height: 100%;
     }
     .btn-right {
       background-color: #F1F0FF;
       color: $thinking-color;
+      height: 100%;
     }
   }
 }
@@ -112,12 +122,12 @@
 }
 
 #footer .search .byCommunity {
-  //@include height(0.14);
   @include bgc-bright(0.145);
   .title {
     color: #CCCCCC;
   }
   .community {
+    @include height(0.05);
     text-align: center;
     margin-left: auto;
     margin-right: auto;

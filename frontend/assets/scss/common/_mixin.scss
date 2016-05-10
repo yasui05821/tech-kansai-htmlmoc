@@ -2,17 +2,14 @@
 @mixin height($value) {
   height: $value * 2000px;
 }
-//@mixin width ($value) {
-//  width: $value * 100%;
-//}
 @mixin blog-width  {
   width: 96% ;
   margin-left: 2%;
   margin-right: 2%;
 }
 // 初期設定
-@mixin font-size {
-  font-size: 10px;
+@mixin font-size($value) {
+  font-size: $value * 10px;
 }
 @mixin font-style {
   font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","Osaka",sans-serif;
@@ -89,7 +86,7 @@ $hbcolor-shadow: #1761A2;
   font-weight: normal;
 }
 @mixin blog-h1 {
-  
+  font-weight: normal;
 }
 @mixin blog-h2 {
   background-color: $blog-h2;
@@ -124,6 +121,15 @@ $hbcolor-shadow: #1761A2;
 }
 
 // その他部品
+@mixin reduction-onWidth($width) {
+  width: $width;
+  height: auto;
+}
+@mixin reduction-onHeight($height) {
+  @include height($height);
+  //height: $height;
+  width: auto;
+}
 @mixin icon {
   border-radius: 15px;
   margin-right: 0.5em;
