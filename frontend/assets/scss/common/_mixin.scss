@@ -3,13 +3,20 @@
   height: $value * 2000px;
 }
 @mixin blog-width  {
-  width: 96% ;
-  margin-left: 2%;
-  margin-right: 2%;
+  box-sizing: border-box;
+  width: 95% ;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+@mixin blog-padding($top-bottom) {
+  padding: $top-bottom + em 0.4em;
 }
 // 初期設定
 @mixin font-size($value) {
   font-size: $value * 10px;
+}
+@mixin line-height($value) {
+  line-height: $value * 10px;
 }
 @mixin font-style {
   font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","Osaka",sans-serif;
@@ -85,20 +92,36 @@ $hbcolor-shadow: #1761A2;
   font-size: 1em;
   font-weight: normal;
 }
+@mixin blog-p {
+  @include blog-width;
+  @include blog-padding(1);
+  @include font-size(1.4);
+  @include line-height(2.1);
+}
 @mixin blog-h1 {
+  @include font-size(1.9);
   font-weight: normal;
 }
 @mixin blog-h2 {
+  @include font-size(1.6);
+  @include blog-width;
+  @include blog-padding(0.9);
   background-color: $blog-h2;
 }
 @mixin blog-h3 {
+  @include font-size(1.5);
+  @include blog-width;
+  @include blog-padding(0.6);
   border-bottom: 3px solid $blog-h3;
 }
 @mixin blog-h4 {
+  @include font-size(1.5);
+  @include blog-width;
+  @include blog-padding(0.6);
   border-left: 3px solid #E1D6C6;
-  //margin-left: 2%;
 }
 @mixin list {
+  @include blog-width;
   list-style-type: square;
   color: $blog-list;
   span {
@@ -192,6 +215,7 @@ $hbcolor-shadow: #1761A2;
   background-size: 4px 4px;
 }
 @mixin table {
+  @include blog-width;
   table {
     margin-left: auto;
     margin-right: auto;
