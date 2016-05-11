@@ -2,6 +2,16 @@
 @mixin height($value) {
   height: $value * 2000px;
 }
+@mixin width-onFont ($value) {
+  width: $value * 10px;
+}
+@mixin height-onFont ($value) {
+  height: $value * 10px;
+}
+@mixin reduction-onHeight($height) {
+  @include height-onFont($height);
+  width: auto;
+}
 @mixin blog-width  {
   box-sizing: border-box;
   width: 95% ;
@@ -10,6 +20,9 @@
 }
 @mixin blog-padding($top-bottom) {
   padding: $top-bottom + em 0.4em;
+}
+@mixin paragraph-padding {
+  padding: 0 0.4em 1.8em 0.4em;
 }
 // 初期設定
 @mixin font-size($value) {
@@ -42,8 +55,8 @@ $link-color: #ECA443;
 $hr-color: #ECEDEE;
 $tableTitle-color: #FAF8F5;
 $blockquote-color: #F5F6F7;
-$quotation-color: #D6D7D8;
 $endline-color: #F0EAE2;
+$date-color: #777777;
 
 $blog-h2: #EBE3DA;
 $blog-h3: #E6DCD0;
@@ -85,43 +98,53 @@ $hbcolor-shadow: #1761A2;
   font-weight: normal;
 }
 @mixin h1 {
-  font-size: 1.2em;
+  @include font-size(2);
   font-weight: normal;
 }
 @mixin h2 {
-  font-size: 1em;
+  @include font-size(1.6);
   font-weight: normal;
 }
 @mixin blog-p {
   @include blog-width;
-  @include blog-padding(1);
+  @include paragraph-padding;
   @include font-size(1.4);
   @include line-height(2.1);
 }
 @mixin blog-h1 {
   @include font-size(1.9);
   font-weight: normal;
+  @include line-height(2.3);
 }
 @mixin blog-h2 {
   @include font-size(1.6);
   @include blog-width;
   @include blog-padding(0.9);
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
   background-color: $blog-h2;
 }
 @mixin blog-h3 {
   @include font-size(1.5);
   @include blog-width;
   @include blog-padding(0.6);
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
   border-bottom: 3px solid $blog-h3;
 }
 @mixin blog-h4 {
   @include font-size(1.5);
   @include blog-width;
   @include blog-padding(0.6);
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
   border-left: 3px solid #E1D6C6;
 }
 @mixin list {
   @include blog-width;
+  @include font-size(1.4);
+  @include line-height(3);
+  margin-bottom: 2em;
   list-style-type: square;
   color: $blog-list;
   span {
@@ -137,21 +160,47 @@ $hbcolor-shadow: #1761A2;
 }
 @mixin blockquote {
   background-color: $blockquote-color;
+  box-sizing: border-box;
   border-radius: 4px;
   width: 88%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
+  .quotation {
+    @include reduction-onHeight(1.4);
+  }
+  .left {
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+  }
+  .right {
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+    float: right;
+  }
+  p {
+    @include font-size(1.4);
+    @include line-height(2.1);
+    padding: 1em 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-
 // その他部品
-@mixin reduction-onWidth($width) {
-  width: $width;
-  height: auto;
+@mixin line {
+  @include reduction-onHeight(1.5);
+  display: block;
+  margin: 0.8em auto;
 }
-@mixin reduction-onHeight($height) {
-  @include height($height);
-  //height: $height;
-  width: auto;
+@mixin community-tag {
+  @include font-size(1.1);
+  @include line-height(2.4);
+  box-sizing: border-box;
+  padding: 0.2em 1em;
+  border-radius: 3px;
+  display: inline-block;
+  color: white;
+  background-color: $link-color;
 }
 @mixin icon {
   border-radius: 15px;
@@ -214,8 +263,9 @@ $hbcolor-shadow: #1761A2;
   );
   background-size: 4px 4px;
 }
-@mixin table {
+@mixin table($value) {
   @include blog-width;
+  padding-bottom: 2em;
   table {
     margin-left: auto;
     margin-right: auto;
@@ -226,6 +276,11 @@ $hbcolor-shadow: #1761A2;
   }
   thead {
     background-color: $tableTitle-color;
+  }
+  th, td {
+    @include font-size(1.4);
+    width: $value * 100%;
+    padding: 0.7em 1em;
   }
 }
 
