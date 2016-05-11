@@ -9,11 +9,13 @@
   }
   .info {
     @include clearfix;
-    @include height-onFont(5);
-    .date, .icon {
+    @include height-onFont(5.5);
+    .date, .icon, .writer {
+      display: inline-block;
       float: left;
     }
     .date {
+      @include line-height(3);
       width: 73%;
       color: $date-color;
     }
@@ -21,6 +23,7 @@
       @include icon;
     }
     .writer {
+      @include line-height(3);
       @include font-size(1.3);
     }
   }

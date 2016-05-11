@@ -96,6 +96,11 @@ $hbcolor-shadow: #1761A2;
   background-color: #8A7B6E;
 }
 // タグ
+@mixin photo{
+  @include blog-width;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
 @mixin thumbnail-title {
   margin: 0;
   font-size: 1em;
