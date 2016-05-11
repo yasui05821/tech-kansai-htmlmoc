@@ -24,50 +24,30 @@
       @include font-size(1.3);
     }
   }
-  .sns {
+  .sns .snscount{
     @include clearfix;
-    .twitter, .facebook, .hatebu {
-      @include height-onFont(1.6);
-      padding: 0;
-      float: left;
-      margin-right: 0.5em;
-    }
-    .twitter-icon, .facebook-icon, .hatebu-icon {
-      @include reduction-onHeight(0.8);
-    }
-    .snsbtn-left, .snsbtn-right {
-      float: left;
-      height: 100%;
-      p {
-        @include font-size(0.4);
-      }
-    }
-    .snsbtn-left {
-      p {
-        display: inline-block;
-      }
-    }
+    @include snscount;
   }
 }
 
 #blog .header .sns {
   color: white;
-  .twitter .snsbtn-right {
+  .twitter .snscount-right {
     background-color: $twcolor-bright;
   }
-  .facebook .snsbtn-right {
+  .facebook .snscount-right {
     background-color: $fbcolor-bright;
   }
-  .hatebu .snsbtn-right {
+  .hatebu .snscount-right {
     background-color: $hbcolor-bright;
   }
-  .twitter .snsbtn-left {
+  .twitter .snscount-left {
     background-color: $twcolor-dark;
   }
-  .facebook .snsbtn-left {
+  .facebook .snscount-left {
     background-color: $fbcolor-dark;
   }
-  .hatebu .snsbtn-left {
+  .hatebu .snscount-left {
     background-color: $hbcolor-dark;
   }
 }

@@ -193,6 +193,42 @@ $hbcolor-shadow: #1761A2;
   }
 }
 // その他部品
+@mixin snscount {
+  @include height-onFont(1.8);
+  padding: 0;
+  float: left;
+  margin-right: 0.5em;
+  p {
+    @include font-size(0.2);
+    @include line-height(1.8);
+  }
+  img {
+    @include reduction-onHeight(0.9);
+    margin-left: 11%;
+    margin-top: 0.2em;
+  }
+  .snscount-left, .snscount-right {
+    float: left;
+    height: 100%;
+  }
+  .snscount-left {
+    @include width-onFont(6.5);
+    img, p {
+      float: left;
+    }
+    p {
+      padding-left: 9%;
+      display: inline-block;
+    }
+  }
+  .snscount-right {
+    @include width-onFont(1.7);
+    p {
+      text-align: center;
+    }
+  }
+}
+
 @mixin categoryBtn-margin($top, $right, $bottom, $left) {
   margin-top: $top;
   margin-right: $right;
