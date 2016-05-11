@@ -300,11 +300,15 @@ $hbcolor-shadow: #1761A2;
 @mixin icon-custom($radius) {
   border-radius: $radius + px;
 }
-@mixin sns-cube($color) {
+@mixin sns-cube($color, $value) {
+  height: $value;
+  width: $value;
+  text-align: center;
   float: left;
-  color: $color;
+  padding: 0.15em;
   border: 1px solid $color;
   border-radius: 2px;
+  color: $color;
 }
 @mixin shadow-box($bgc-color, $color, $shadow-color) {
   color: $color;

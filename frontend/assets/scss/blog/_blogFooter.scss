@@ -29,35 +29,60 @@
       border-bottom: 1px solid #CDCDCD;
     }
     .icon {
+      @include icon-custom(30);
       float: left;
-      @include icon-custom(30)
+      margin-top: 1.2em;
+      margin-left: 1.1em;
     }
-    .sns {
-      @include clearfix;
-      .twitter {
-        @include sns-cube($twcolor-dark);
+    .profile-info {
+      float: left;
+      text-align: left;
+      margin-top: 1em;
+      margin-left: 1.4em;
+      .writer {
+        @include font-size(1.5);
       }
-      .facebook {
-        @include sns-cube($fbcolor-dark);
+      .skill {
+        @include font-size(1);
+        margin-top: 1em;
+        color: $date-color;
+      }
+      .sns {
+        @include clearfix;
+        margin-top: 0.5em;
+        .twitter {
+          @include sns-cube($twcolor-dark, 1em);
+        }
+        .facebook {
+          @include sns-cube($fbcolor-dark, 1em);
+        }
       }
     }
   }
   .push-sns {
     @include clearfix;
-    .twitter, .facebook, .hatebu {
-      @include height(0.019);
-      float: left;
-      width: 31%;
-      color: white;
-      p {
-        @include font-size(0.9);
-      }
-    }
     .twitter, .facebook {
       margin-right: 3%;
     }
-    .twitter-icon, .facebook-icon, .hatebu-icon {
-      @include reduction-onHeight(0.009);
+    .push-btn {
+      @include height-onFont(3.8);
+      float: left;
+      width: 31%;
+      color: white;
+      img {
+        @include reduction-onHeight(1.6);
+        float: left;
+        margin-left: 15%;
+        margin-top: 0.6em;
+      }
+      p {
+        @include line-height(3.8);
+        @include font-size(1.2);
+        float: right;
+        margin-right: 20%;
+        margin-top: 0.1em;
+        display: inline-block;
+      }
     }
     .twitter {
       @include shadow-box($twcolor-dark, white, $twcolor-shadow);
@@ -67,9 +92,6 @@
     }
     .hatebu {
       @include shadow-box($hbcolor-dark, white, $hbcolor-shadow);
-    }
-    p {
-      display: inline-block;
     }
   }
 }
