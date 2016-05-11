@@ -6,6 +6,9 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .blog-p {
+    @include blog-p;
+  }
   .blog-h2 {
     @include blog-h2;
   }
@@ -22,7 +25,7 @@
     @include list;
   }
   .table {
-    @include table;
+    @include table(0.5);
   }
   .link {
     @include a-color;
@@ -34,11 +37,7 @@
     @include clearfix;
     @include blockquote;
   }
-  .blockquote .quotation{
-    color: $quotation-color;
-  }
-  .endline {
-    text-align: center;
-    color: $endline-color;
+  .line {
+    @include line;
   }
 }

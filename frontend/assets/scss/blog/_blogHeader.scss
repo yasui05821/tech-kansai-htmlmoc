@@ -1,28 +1,39 @@
 @import "../common/_mixin";
 
 #blog .header {
+  .title, .info, .sns {
+    @include blog-width;
+  }
   .blog-h1 {
     @include blog-h1;
   }
   .info {
     @include clearfix;
-    @include height(0.025);
+    @include height-onFont(5);
     .date, .icon {
       float: left;
     }
+    .date {
+      width: 73%;
+      color: $date-color;
+    }
     .icon {
-      @include icon
+      @include icon;
+    }
+    .writer {
+      @include font-size(1.3);
     }
   }
   .sns {
     @include clearfix;
     .twitter, .facebook, .hatebu {
-      @include height(0.008);
+      @include height-onFont(1.6);
+      padding: 0;
       float: left;
       margin-right: 0.5em;
     }
     .twitter-icon, .facebook-icon, .hatebu-icon {
-      @include reduction-onHeight(0.004);
+      @include reduction-onHeight(0.8);
     }
     .snsbtn-left, .snsbtn-right {
       float: left;

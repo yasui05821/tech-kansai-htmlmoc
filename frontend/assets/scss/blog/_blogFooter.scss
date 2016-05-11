@@ -2,27 +2,29 @@
 
 
 #blog .footer {
+  .tags, .community, .push-sns {
+    @include blog-width;
+  }
   .tags {
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
     .tag {
       @include a-color;
     }
   }
   .community {
     p {
-      border-radius: 3px;
-      display: inline-block;
-      color: white;
-      background-color: $link-color;
+      @include community-tag;
     }
   }
   .writer-profile {
-    //@include clearfix;
-    @include height(0.065);
+    @include height(0.069);
     border: 1px solid #CDCDCD;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2em auto;
+    text-align: center;
     .title {
+      @include line-height(3.4);
       background-color: #ECEDEE;
       border-bottom: 1px solid #CDCDCD;
     }
