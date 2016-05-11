@@ -1,11 +1,10 @@
-@import "common/_mixin";
+@import "./_mixin";
 
-#newArticle .header {
-  @include height(0.04);
+#newArticle .title {
+  //@include height(0.0275);
+  @include line-height(5.5);
+  @include h1;
   text-align: center;
-  h1 {
-    @include h1
-  }
 }
 
 #newArticle .article {

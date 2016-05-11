@@ -8,20 +8,15 @@
   .byArticle, .byCategory, .byTag, .byCommunity {
     @include clearfix
   }
-  h1, h2 {
-    text-align: center;
-  }
-  h1 {
-    @include h1
-  }
-  h2 {
-    @include h2
-  }
 }
 
 #footer .search .byArticle {
   @include bgc-dark(0.07);
   .title {
+    @include h1;
+    margin: 0;
+    padding-top: 1.7em;
+    padding-bottom: 0.9em;
     color: white;
   }
   .fa-search {
@@ -33,7 +28,7 @@
     background-color: #777777;
     border: 1px solid white;
     border-radius: 22px;
-    width: 90%;
+    width: 86%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -47,61 +42,18 @@
 #footer .search .byCategory {
   @include bgc-bright(0.12);
   .title {
-    color: #CCCCCC;
-  }
-  .btn-left, .btn-right {
-    float: left;
-  }
-  .btn-left {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    width: 70%;
-    color: white;
-      i, p {
-        display: inline-block;
-      }
-  }
-  .btn-right {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    width: 12%;
-    margin-left: 0;
+    @include h2;
+    padding: 1.4em;
+    color: $search-title;
   }
   .programing {
-    @include height(0.02);
-    .btn-left {
-      background: $prog-color;
-      height: 100%;
-    }
-    .btn-right {
-      background-color: #CEF3F7;
-      color: $prog-color;
-      height: 100%;
-    }
+    @include category-btn($prog-color, $prog-brightColor);
   }
   .design {
-    @include height(0.02);
-    .btn-left {
-      background: $design-color;
-      height: 100%;
-    }
-    .btn-right {
-      background-color: #FCEEF0;
-      color: $design-color;
-      height: 100%;
-    }
+    @include category-btn($design-color, $design-brightColor);
   }
   .thinking {
-    @include height(0.02);
-    .btn-left {
-      background: $thinking-color;
-      height: 100%;
-    }
-    .btn-right {
-      background-color: #F1F0FF;
-      color: $thinking-color;
-      height: 100%;
-    }
+    @include category-btn($thinking-color, $thinking-brightColor);
   }
 }
 
@@ -109,39 +61,58 @@
   @include bgc-dark(0.075);
   clear: both;
   .title {
-    color: #CCCCCC;
+    @include h2;
+    padding: 1.4em;
+    color: $search-title;
   }
-  .line {
+  .tags {
     text-align: center;
-  }
-  .tag {
-    @include a-color;
+    .tag {
+      @include a-color;
+      @include font-size(1.6);
+      @include line-height(2.8);
+      padding: 0 0.7em;
+    }
   }
 }
 
 #footer .search .byCommunity {
   @include bgc-bright(0.145);
+  //box-sizing: border-box;
   .title {
-    color: #CCCCCC;
+    @include h2;
+    padding: 1.4em;
+    color: $search-title;
   }
   .community {
     @include height(0.045);
     text-align: center;
-    //margin-left: auto;
-    //margin-right: auto;
     background-color: white;
     width: 47%;
-    p {
-      color: $date-color;
-    }
   }
   .left {
     @include block-left;
-    margin: 2% 0 1% 2%;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    margin-right: 0;
+    margin-left: 2.3%;
   }
   .right {
     @include block-right;
-    //margin-right: 2%;
-    margin: 2% 2% 1% 0;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    margin-right: 2.3%;
+    margin-left: 0;
   }
+  .community {
+    .community-picture {
+      margin-top: 0.7em;
+      margin-bottom: 0.7em;
+    }
+    p {
+      @include font-size(1.4);
+      color: $date-color;
+    }
+  }
+
 }

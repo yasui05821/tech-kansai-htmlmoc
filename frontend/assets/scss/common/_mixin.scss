@@ -57,6 +57,7 @@ $tableTitle-color: #FAF8F5;
 $blockquote-color: #F5F6F7;
 $endline-color: #F0EAE2;
 $date-color: #777777;
+$search-title: #CCCCCC;
 
 $blog-h2: #EBE3DA;
 $blog-h3: #E6DCD0;
@@ -64,8 +65,11 @@ $blog-h4: #E1D6C6;
 $blog-list: #D7C8B3;
 
 $prog-color: #4AB1BD;
+$prog-brightColor: #CEF3F7;
 $design-color: #DC8692;
+$design-brightColor: #FCEEF0;
 $thinking-color: #9997CB;
+$thinking-brightColor: #F1F0FF;
 
 $twcolor-dark: #5FADEE;
 $twcolor-bright: #C6DDF1;
@@ -98,11 +102,13 @@ $hbcolor-shadow: #1761A2;
   font-weight: normal;
 }
 @mixin h1 {
-  @include font-size(2);
+  @include font-size(1.9);
+  text-align: center;
   font-weight: normal;
 }
 @mixin h2 {
   @include font-size(1.6);
+  text-align: center;
   font-weight: normal;
 }
 @mixin blog-p {
@@ -187,6 +193,55 @@ $hbcolor-shadow: #1761A2;
   }
 }
 // その他部品
+@mixin categoryBtn-margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+@mixin category-btn($dark, $bright) {
+  @include height-onFont(4.5);
+  width: 100%;
+  .btn-left, .btn-right {
+    height: 100%;
+    float: left;
+  }
+  .btn-left {
+    width: 75%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-sizing: border-box;
+    margin-left: 6.5%;
+    margin-bottom: 0.5em;
+    padding-left: 2em;
+    background: $dark;
+    color: white;
+    i, p {
+      @include line-height(4.5);
+      display: inline-block;
+      float: left;
+    }
+    i {
+      margin-left: 0.8em;
+    }
+    p {
+      margin-left: 1.5em;
+    }
+  }
+  .btn-right {
+    width: 12%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: 0;
+    background-color: $bright;
+    color: $dark;
+    p {
+      @include line-height(4.5);
+      @include font-size(3);
+      text-align: center;
+    }
+  }
+}
 @mixin line {
   @include reduction-onHeight(1.5);
   display: block;
