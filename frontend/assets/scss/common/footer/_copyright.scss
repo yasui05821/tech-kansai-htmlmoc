@@ -1,5 +1,6 @@
 #footer .copyright {
-  @include height(0.01);
+  @include line-height(1.8);
+  @include font-size(1);
   text-align: center;
   background-color: #D68D31;
   color: white;
