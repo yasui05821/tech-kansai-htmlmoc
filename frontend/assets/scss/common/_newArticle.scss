@@ -9,25 +9,35 @@
 }
 
 #newArticle .article {
-  @include height(0.052);
+  @include height(0.051);
   @include clearfix;
   .thumbnail-title {
     @include thumbnail-title
   }
   .picture {
-    position: relative;
+    @include width-onFont(10);
+    @include height-onFont(8.5);
+    margin: 0.5em;
     float: left;
+    border: 1px solid black;
+    //position: relative;
+    //margin: 0.5em;
+  }
+  .article-info {
+    @include clearfix;
+    height: 100%;
+    box-sizing: border-box;
     margin: 0.5em;
   }
-  .label {
-    position: absolute;
-    //left: 0.5em+1px;
-    width: 0;
-    height: 0;
-    border: 17px solid transparent;
-    border-top: 17px solid $prog-color;
-    border-left: 17px solid $prog-color;
-  }
+  //.label {
+  //  position: absolute;
+  //  //left: 0.5em+1px;
+  //  width: 0;
+  //  height: 0;
+  //  border: 17px solid transparent;
+  //  border-top: 17px solid $prog-color;
+  //  border-left: 17px solid $prog-color;
+  //}
   .icon {
     float: left;
     @include icon;
@@ -39,6 +49,6 @@
     border: 1px solid #CDCDCD;
   }
   .date {
-    color: #777777;
+    color: $date-color;
   }
 }

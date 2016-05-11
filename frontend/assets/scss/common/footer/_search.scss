@@ -20,7 +20,6 @@
 }
 
 #footer .search .byArticle {
-  //@include height(0.07);
   @include bgc-dark(0.07);
   .title {
     color: white;
@@ -33,7 +32,7 @@
     @include height(0.02);
     background-color: #777777;
     border: 1px solid white;
-    border-radius: 17px;
+    border-radius: 22px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -46,7 +45,6 @@
 }
 
 #footer .search .byCategory {
-  //@include height(0.14);
   @include bgc-bright(0.12);
   .title {
     color: #CCCCCC;
@@ -127,17 +125,23 @@
     color: #CCCCCC;
   }
   .community {
-    @include height(0.05);
+    @include height(0.045);
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    //margin-left: auto;
+    //margin-right: auto;
     background-color: white;
-    width: 49%;
+    width: 47%;
+    p {
+      color: $date-color;
+    }
   }
   .left {
-    @include block-left
+    @include block-left;
+    margin: 2% 0 1% 2%;
   }
   .right {
-    @include block-right
+    @include block-right;
+    //margin-right: 2%;
+    margin: 2% 2% 1% 0;
   }
 }
