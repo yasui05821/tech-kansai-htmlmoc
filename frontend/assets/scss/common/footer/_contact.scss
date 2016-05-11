@@ -9,11 +9,11 @@
   color: #777777;
   .contactMessage {
     display: inline-block;
-    margin-top: 13%;
+    padding-top: 3.3em;
   }
   .contactBtn {
     @include line-height(4);
-    margin-top: 5%;
+    margin-top: 1.2em;
     margin-right: auto;
     margin-left: auto;
     border: 1px solid #777777;
