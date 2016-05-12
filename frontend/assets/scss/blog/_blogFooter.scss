@@ -49,7 +49,7 @@
       }
       .sns {
         @include clearfix;
-        margin-top: 0.5em;
+        margin-top: 0.8em;
         .twitter {
           @include sns-cube($twcolor-dark, 1em);
         }
@@ -61,6 +61,7 @@
   }
   .push-sns {
     @include clearfix;
+    margin-bottom: 4em;
     .twitter, .facebook {
       margin-right: 3%;
     }
