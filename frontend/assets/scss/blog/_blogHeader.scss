@@ -10,21 +10,23 @@
   .info {
     @include clearfix;
     @include height-onFont(5.5);
-    .date, .icon, .writer {
-      display: inline-block;
-      float: left;
-    }
     .date {
       @include line-height(3);
-      width: 73%;
+      float: left;
       color: $date-color;
     }
-    .icon {
-      @include icon;
-    }
-    .writer {
-      @include line-height(3);
-      @include font-size(1.3);
+    .writer-info {
+      float: right;
+      .icon, .writer {
+        float: left;
+      }
+      .icon {
+        @include icon;
+      }
+      .writer {
+        @include line-height(3);
+        @include font-size(1.3);
+      }
     }
   }
   .sns .snscount{
@@ -34,6 +36,7 @@
 }
 
 #blog .header .sns {
+  clear: both;
   color: white;
   .twitter .snscount-right {
     background-color: $twcolor-bright;
