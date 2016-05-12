@@ -102,8 +102,7 @@ $hbcolor-shadow: #1761A2;
   margin-bottom: 0.5em;
 }
 @mixin thumbnail-title {
-  margin: 0;
-  font-size: 1em;
+  @include font-size(1.2);
   font-weight: normal;
 }
 @mixin h1 {
@@ -198,6 +197,56 @@ $hbcolor-shadow: #1761A2;
   }
 }
 // その他部品
+@mixin icon {
+  border-radius: 15px;
+  margin-right: 0.5em;
+}
+@mixin article {
+  @include height(0.051);
+  clear: both;
+  &:nth-child(even) {
+    border: 1px solid #CDCDCD;
+  }
+  .picture {
+    margin: 0.6em;
+    float: left;
+  }
+  //.label {
+  //  position: absolute;
+  //  //left: 0.5em+1px;
+  //  width: 0;
+  //  height: 0;
+  //  border: 17px solid transparent;
+  //  border-top: 17px solid $prog-color;
+  //  border-left: 17px solid $prog-color;
+  //}
+  .article-info {
+    float: left;
+    width: 65%;
+    .thumbnail-title {
+      @include thumbnail-title;
+      @include line-height(1.7);
+      margin-top: 0.8em;
+    }
+    .date {
+      @include font-size(1);
+      margin-top: 0.3em;
+      color: $date-color;
+    }
+    .icon, .writer {
+      float: left;
+    }
+    .icon {
+      @include icon;
+      margin-top: 0.3em;
+    }
+    .writer {
+      @include font-size(1.1);
+      margin-top: 1.3em;
+    }
+  }
+
+}
 @mixin snscount {
   @include height-onFont(1.8);
   padding: 0;
@@ -298,10 +347,6 @@ $hbcolor-shadow: #1761A2;
   color: white;
   background-color: $link-color;
 }
-@mixin icon {
-  border-radius: 15px;
-  margin-right: 0.5em;
-}
 @mixin icon-custom($radius) {
   border-radius: $radius + px;
 }
@@ -311,6 +356,7 @@ $hbcolor-shadow: #1761A2;
   text-align: center;
   float: left;
   padding: 0.15em;
+  margin-right: 0.5em;
   border: 1px solid $color;
   border-radius: 2px;
   color: $color;

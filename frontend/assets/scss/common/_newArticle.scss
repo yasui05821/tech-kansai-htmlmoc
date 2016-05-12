@@ -1,53 +1,11 @@
 @import "./_mixin";
 
 #newArticle .title {
-  //@include height(0.0275);
   @include line-height(5.5);
   @include h1;
   text-align: center;
 }
 
 #newArticle .article {
-  @include height(0.051);
-  @include clearfix;
-  .thumbnail-title {
-    @include thumbnail-title
-  }
-  .picture {
-    @include width-onFont(10);
-    @include height-onFont(8.5);
-    margin: 0.5em;
-    float: left;
-    border: 1px solid black;
-    //position: relative;
-    //margin: 0.5em;
-  }
-  .article-info {
-    @include clearfix;
-    height: 100%;
-    box-sizing: border-box;
-    margin: 0.5em;
-  }
-  //.label {
-  //  position: absolute;
-  //  //left: 0.5em+1px;
-  //  width: 0;
-  //  height: 0;
-  //  border: 17px solid transparent;
-  //  border-top: 17px solid $prog-color;
-  //  border-left: 17px solid $prog-color;
-  //}
-  .icon {
-    float: left;
-    @include icon;
-  }
-}
-
-#newArticle .article {
-  &:nth-child(even) {
-    border: 1px solid #CDCDCD;
-  }
-  .date {
-    color: $date-color;
-  }
+    @include article;
 }
