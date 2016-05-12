@@ -9,9 +9,9 @@
   }
   .info {
     @include clearfix;
-    @include height-onFont(5.5);
+    @include height-onFont(6);
     .date {
-      @include line-height(3);
+      @include line-height(5);
       float: left;
       color: $date-color;
     }
@@ -22,9 +22,10 @@
       }
       .icon {
         @include icon;
+        margin-top: 10%;
       }
       .writer {
-        @include line-height(3);
+        @include line-height(5);
         @include font-size(1.3);
       }
     }
