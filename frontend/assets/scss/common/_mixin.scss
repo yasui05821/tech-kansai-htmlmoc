@@ -216,19 +216,53 @@ $hbcolor-shadow: #1761A2;
   &:nth-child(even) {
     border: 1px solid #CDCDCD;
   }
-  .picture {
-    margin: 0.6em;
+  .article-picture {
+    position: relative;
     float: left;
+    .label {
+      .triangle, i {
+        margin: 0.6em;
+      }
+      .programing {
+        position: absolute;
+        z-index: 0;
+        width: 0;
+        height: 0;
+        border: 17px solid transparent;
+        border-top: 17px solid $prog-color;
+        border-left: 17px solid $prog-color;
+      }
+      .design {
+        position: absolute;
+        z-index: 0;
+        width: 0;
+        height: 0;
+        border: 17px solid transparent;
+        border-top: 17px solid $design-color;
+        border-left: 17px solid $design-color;
+      }
+      .thinking {
+        position: absolute;
+        z-index: 0;
+        width: 0;
+        height: 0;
+        border: 17px solid transparent;
+        border-top: 17px solid $thinking-color;
+        border-left: 17px solid $thinking-color;
+      }
+      i {
+        @include font-size(1.3);
+        position: absolute;
+        z-index: 1;
+        top: 0.4em;
+        left: 0.4em;
+        color: white;
+      }
+    }
+    .picture {
+      margin: 0.6em;
+    }
   }
-  //.label {
-  //  position: absolute;
-  //  //left: 0.5em+1px;
-  //  width: 0;
-  //  height: 0;
-  //  border: 17px solid transparent;
-  //  border-top: 17px solid $prog-color;
-  //  border-left: 17px solid $prog-color;
-  //}
   .article-info {
     float: left;
     width: 65%;
@@ -254,7 +288,6 @@ $hbcolor-shadow: #1761A2;
       margin-top: 1.3em;
     }
   }
-
 }
 @mixin snscount {
   @include height-onFont(1.8);
