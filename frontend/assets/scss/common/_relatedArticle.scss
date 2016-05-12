@@ -1,0 +1,11 @@
+@import "./_mixin";
+
+#relatedArticle .title {
+  @include line-height(5.5);
+  @include h1;
+  text-align: center;
+}
+
+#relatedArticle .article {
+  @include article;
+}
