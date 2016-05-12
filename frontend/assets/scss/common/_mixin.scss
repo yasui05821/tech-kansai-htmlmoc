@@ -123,8 +123,9 @@ $hbcolor-shadow: #1761A2;
 }
 @mixin blog-h1 {
   @include font-size(1.9);
-  font-weight: normal;
   @include line-height(2.3);
+  margin-top: 1.2em;
+  font-weight: normal;
 }
 @mixin blog-h2 {
   @include font-size(1.6);
