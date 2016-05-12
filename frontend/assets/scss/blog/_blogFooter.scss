@@ -48,13 +48,11 @@
         color: $date-color;
       }
       .sns {
-        @include clearfix;
-        margin-top: 0.8em;
         .twitter {
-          @include sns-cube($twcolor-dark, 1em);
+          @include sns-cube($twcolor-dark, 1.4em);
         }
         .facebook {
-          @include sns-cube($fbcolor-dark, 1em);
+          @include sns-cube($fbcolor-dark, 1.4em);
         }
       }
     }
