@@ -1,29 +1,6 @@
 @import "../common/_mixin";
+@import "../lib/value";
 
-#header {
-  @include clearfix;
-  @include height(0.022);
-  .title, i {
-    @include line-height(2.5);
-    display: inline-block;
-  }
-  .title {
-    @include font-size(1.6);
-    color: $date-color;
-    float: left;
-    padding-top: 0.6em;
-    margin-left: 1em;
-  }
-  i {
-    @include font-size(2.2);
-    float: right;
-    padding-top: 0.5em;
-    margin-right: 0.6em;
-    color: #CDCDCD;
-  }
-  .color-bar {
-    clear: both;
-    width: 100%;
-  }
 
-}
+
+

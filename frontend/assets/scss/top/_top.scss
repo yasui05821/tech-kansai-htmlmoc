@@ -1,71 +1,24 @@
-@import "../common/_mixin";
+@import "common/_mixin";
+@import "lib/_value";
 
-#top {
-  @include clearfix;
-  .home-image {
-    @include height(0.114);
-    text-align: center;
-    .logo {
-      padding: 2em 0;
-    }
-    .description {
-      @include font-size(1.3);
-      line-height: 1.8em;
-      padding: 1em 0;
-    }
-  }
-  .contents {
-    @include height(0.12);
-    .content {
-      height: 50%;
-      p {
-        @include line-height(1.8);
-        width: 59%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-    .tech, .blog {
-      @include block-left;
-      width: 50%;
-    }
-    .newcomer, .community {
-      @include block-right;
-      width: 50%;
-    }
-    .tech, .newcomer, .community {
-      p {
-        margin-top: 1.8em;
-      }
-    }
-    .blog {
-      p {
-        margin-top: 2.4em;
-      }
-    }
+//about start
+.about {
+  text-align: center;
+  background: url(./../../image/about_bg.png);
+  background-size: cover;
+  .logo {
+    padding: 2em 0;
   }
 }
-
-#top {
-  .description {
-    color: #584E47;
-  }
-  p {
-    color: white;
-  }
-  .contents {
-    .tech, .tech>p {
-      @include bgc-tech
-    }
-    .newcomer, .newcomer>p {
-      @include bgc-newcomer
-    }
-    .blog, .blog>p {
-      @include bgc-blog
-    }
-    .community, .community>p{
-      @include bgc-community;
-    }
+.about__ttl {
+  img {
+    max-width: 300px;
+    height: auto;
   }
 }
-
+.about__description {
+  color: $clr-black;
+  line-height: 1.8em;
+  padding: 1em 0;
+}
+//about end

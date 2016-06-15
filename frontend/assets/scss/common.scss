@@ -1,17 +1,80 @@
 @import "common/_mixin";
+@import "lib/_value";
+
+@import "common/_newArticle";
+@import "common/_footer";
 
 *{
-  //@include font-size;
   @include font-style;
 
   h1, h2, p, i, li, div, img {
-    //@include block;
     margin: 0;
+  }
+  color: $clr-gray1;
+
+  a {
+    color: $clr-main;
   }
 }
 
-@import "common/_header";
-@import "top/top";
-@import "common/_newArticle";
-@import "common/_footer";
+.container {
+  padding: 3em;
+}
+// header start
+  .header {
+    padding:10px 10px 15px;
+    background: url(./../../image/head_border.png);
+    background-repeat: repeat-x;
+    background-size: 250px;
+    background-position: bottom;
+    @include clearfix;
+  }
+
+  .header__logo {
+    display: inline-block;
+    float: left;
+    width: 0;
+    height: 0;
+    margin: 0;
+    img {
+      max-width: 200px;
+      height: auto;
+    }
+  }
+
+  //search start
+  .search {
+    float: right;
+  }
+  .search__input {
+    display: none;
+  }
+
+  .search__btn {
+    display: none;
+  }
+
+  .search__btn--sp {
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $clr-main;
+    box-shadow: 0 1px 1px #ccc;
+    a {
+      display: inline-block;
+    }
+    i {
+      margin-top: 8px;
+      color: #fff;
+    }
+  }
+  //search end
+//header end
+
+
+.contents-top {
+  @import "top/top";
+}
 

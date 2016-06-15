@@ -3,37 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>top</title>
+    <!--<base href="http://tec-kansai.tech/">-->
+    <title>Tech Tech Kansai</title>
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
 </head>
 <body>
-    <div id="header">
-        <p class="title">TechTechKansai</p>
-        <i class="fa fa-bars"></i>
-        <img class="color-bar" src="image/head_border.png" alt="">
+    <div class="header">
+        <h1 class="header__logo"><img src="./image/logo.png" alt="Tech Tech Kansai"></h1>
+        <div class="search">
+            <div class="search__input"><i class="material-icons">&#xE8B6;</i></div>
+            <div class="search__btn">詳細検索</div>
+            <div class="search__btn--sp"><a href="#"><i class="material-icons">&#xE8B6;</i></a></div>
+        </div>
     </div>
-
-    <div id="top">
-        <div class="home-image">
-            <div class="logo">LOGO</div>
-            <div class="description">
-                関西のWeb・IT業界のコミュニティ<br>
-                （勉強会・交流会）情報を中心に、<br>
-                「おもろい」感じの学べるイベントを沢山<br>
-                紹介していきます。
+    <div class="contents-top">
+        <div class="about">
+            <div class="container">
+                <div class="about__ttl"><img src="./image/logo.png" alt=""></div>
+                <div class="about__description">
+                    関西のWeb・IT業界のコミュニティ<br>
+                    （勉強会・交流会）情報を中心に、<br>
+                    「おもろい」感じの学べるイベントを<br>
+                    沢山紹介していきます。
+                </div>
             </div>
         </div>
 
-        <div class="contents">
-                <div class="content tech"><p>TechTech<br>Kansai<br>について</p></div>
-                <div class="content newcomer"><p>はじめて<br>勉強会に<br>参加する方へ</p></div>
-                <div class="content blog"><p>ブログ書いて<br>みませんか？</p></div>
-                <div class="content community"><p>関西の<br>コミュニティ<br>紹介</p></div>
-        </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
 
     <div id="newArticle">
         <h1 class="title">最新の記事</h1>
@@ -44,12 +54,12 @@
                     <div class="triangle programing"></div>
                     <i class="material-icons">build</i>
                 </div>
-                <img class="picture" src="http://placehold.it/100x82" alt="">
+                <img class="picture" src="http://placekitten.com/100/82" alt="">
             </div>
             <div class="article-info">
                 <p class="thumbnail-title">PHPカンファレンス北海道 2016にて登壇してきました。</p>
                 <p class="date">2016/04/16</p>
-                <img class="icon" src="http://placehold.it/28x28" alt="">
+                <img class="icon" src="http://placekitten.com/100/82" alt="">
                 <p class="writer">mikakane</p>
             </div>
         </div>
@@ -65,7 +75,7 @@
             <div class="article-info">
                 <p class="thumbnail-title">PHPカンファレンス北海道 2016にて登壇してきました。</p>
                 <p class="date">2016/04/16</p>
-                <img class="icon" src="http://placehold.it/28x28" alt="">
+                <img class="icon" src="http://placekitten.com/100/82" alt="">
                 <p class="writer">mikakane</p>
             </div>
         </div>
@@ -76,12 +86,13 @@
                     <div class="triangle thinking"></div>
                     <i class="material-icons">lightbulb_outline</i>
                 </div>
-                <img class="picture" src="http://placehold.it/100x82" alt="">
+                <img class="picture" src="http://placekitten.com/100/82" alt="">
             </div>
             <div class="article-info">
-                <p class="thumbnail-title">PHPカンファレンス北海道 2016にて登壇してきました。</p>
                 <p class="date">2016/04/16</p>
-                <img class="icon" src="http://placehold.it/28x28" alt="">
+                <p class="Community">[ PHP勉強会 ]</p>
+                <p class="thumbnail-title">PHPカンファレンス北海道 2016にて登壇してきました。</p>
+                <img class="icon" src="http://placekitten.com/100/82" alt="">
                 <p class="writer">mikakane</p>
             </div>
         </div>
@@ -92,19 +103,22 @@
                     <div class="triangle programing"></div>
                     <i class="material-icons">build</i>
                 </div>
-                <img class="picture" src="http://placehold.it/100x82" alt="">
+                <img class="picture" src="http://placekitten.com/100/82" alt="">
             </div>
             <div class="article-info">
                 <p class="thumbnail-title">PHPカンファレンス北海道 2016にて登壇してきました。</p>
                 <p class="date">2016/04/16</p>
-                <img class="icon" src="http://placehold.it/28x28" alt="">
+                <img class="icon" src="http://placekitten.com/100/82" alt="">
                 <p class="writer">mikakane</p>
             </div>
         </div>
 
     </div>
-
-
+    <nav class="info">
+        <ul>
+            <li><a href="">はじめて勉強会に参加する人へ</a></li>
+        </ul>
+    </nav>
     <div id="footer">
         <div class="search">
             <div class="byArticle">
@@ -189,10 +203,22 @@
             <p class="contactMessage">運営に関するお問い合わせはこちら</p>
             <div class="contactBtn">お問い合わせ</div>
         </div>
-
-        <div class="copyright">Copyright © Tech Tech Kansai</div>
-
-    </div>
+        <div class="container">
+            <dl>
+                <dt>
+                    Tech Tech Kansai
+                </dt>
+                <dd>はじめて勉強会に参加する人へ</dd>
+                <dd>はじめて勉強会に参加する人へ</dd>
+                <dd>はじめて勉強会に参加する人へ</dd>
+                <dd>はじめて勉強会に参加する人へ</dd>
+            </dl>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <small>Copyright © Tech Tech Kansai</small>
+            </div>
+        </div>
 
 
 
