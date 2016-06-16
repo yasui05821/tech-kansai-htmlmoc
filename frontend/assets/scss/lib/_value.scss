@@ -1,4 +1,17 @@
-$clr-main: #F5A22F;
-$clr-black: #71706F;
-$clr-gray1: #8A8887;
-$clr-gray2: #CCCCCC;
+//colors
+  $clr-main: #F5A22F;
+  $clr-black: #71706F;
+  $clr-gray1: #8A8887;
+  $clr-gray2: #CCCCCC;
+  $clr-gray3: #EDECEB;
+
+  //category
+  $clr-prog: #4AB1BD;
+  $clr-prog-bright: #CEF3F7;
+  $clr-design: #DC8692;
+  $clr-design-bright: #FCEEF0;
+  $clr-other: #9997CB;
+  $clr-other-bright: #F1F0FF;
+
+//メディアクエリ
+$break-point: 800px; //PC表示

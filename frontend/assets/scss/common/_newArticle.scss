@@ -1,4 +1,4 @@
-@import "./_mixin";
+@import "../lib/mixin";
 
 #newArticle .title {
   @include line-height(5.5);

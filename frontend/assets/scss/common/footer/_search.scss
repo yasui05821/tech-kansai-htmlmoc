@@ -1,4 +1,4 @@
-@import "common/_mixin";
+@import "lib/_mixin";
 
 #footer {
   clear: both;
@@ -56,13 +56,13 @@
     color: $search-title;
   }
   .programing {
-    @include category-btn($prog-color, $prog-brightColor);
+    @include category-btn($clr-prog, $clr-prog-bright);
   }
   .design {
-    @include category-btn($design-color, $design-brightColor);
+    @include category-btn($clr-design, $clr-design-bright);
   }
   .thinking {
-    @include category-btn($thinking-color, $thinking-brightColor);
+    @include category-btn($clr-other, $clr-other-bright);
   }
 }
 

@@ -1,3 +1,5 @@
+@import "value";
+
 // 全体
 @mixin height($value) {
   height: $value * 2000px;
@@ -43,13 +45,7 @@
   float: right;
   border: none;
 }
-@mixin clearfix {
-  &:after {
-    clear: both;
-    display: block;
-    content: '';
-  }
-}
+
 // 色
 $link-color: #ECA443;
 $hr-color: #ECEDEE;
@@ -64,12 +60,7 @@ $blog-h3: #E6DCD0;
 $blog-h4: #E1D6C6;
 $blog-list: #D7C8B3;
 
-$prog-color: #4AB1BD;
-$prog-brightColor: #CEF3F7;
-$design-color: #DC8692;
-$design-brightColor: #FCEEF0;
-$thinking-color: #9997CB;
-$thinking-brightColor: #F1F0FF;
+
 
 $twcolor-dark: #5FADEE;
 $twcolor-bright: #C6DDF1;
@@ -229,8 +220,8 @@ $hbcolor-shadow: #1761A2;
         width: 0;
         height: 0;
         border: 17px solid transparent;
-        border-top: 17px solid $prog-color;
-        border-left: 17px solid $prog-color;
+        border-top: 17px solid $clr-prog;
+        border-left: 17px solid $clr-prog;
       }
       .design {
         position: absolute;
@@ -238,8 +229,8 @@ $hbcolor-shadow: #1761A2;
         width: 0;
         height: 0;
         border: 17px solid transparent;
-        border-top: 17px solid $design-color;
-        border-left: 17px solid $design-color;
+        border-top: 17px solid $clr-design;
+        border-left: 17px solid $clr-design;
       }
       .thinking {
         position: absolute;
@@ -247,8 +238,8 @@ $hbcolor-shadow: #1761A2;
         width: 0;
         height: 0;
         border: 17px solid transparent;
-        border-top: 17px solid $thinking-color;
-        border-left: 17px solid $thinking-color;
+        border-top: 17px solid $clr-other;
+        border-left: 17px solid $clr-other;
       }
       i {
         @include font-size(1.3);
@@ -488,3 +479,41 @@ $hbcolor-shadow: #1761A2;
   border: 1px solid black;
 }
 
+// -- new --
+//common
+@mixin clearfix {
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+}
+
+//text
+@mixin heading {
+  margin: 1.2em 0;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: $clr-gray1;
+}
+
+@mixin heading--bg {
+  @include  heading;
+  background: $clr-gray3;
+
+}
+
+//background
+  @mixin bg_stripe{
+    background: -webkit-gradient(linear, left top, right bottom, from($clr-gray3), color-stop(0.25, $clr-gray3), color-stop(0.25, white), color-stop(0.5, white), color-stop(0.5, $clr-gray3), color-stop(0.75, $clr-gray3), color-stop(0.75, white), to(white));
+    background: -moz-linear-gradient(-45deg, $clr-gray3 25%, white 25%, white 50%, $clr-gray3 50%, $clr-gray3 75%, white 75%, white);
+    background: linear-gradient(-45deg, $clr-gray3 25%, white 25%, white 50%, $clr-gray3 50%, $clr-gray3 75%, white 75%, white);
+    background-size: 4px 4px;
+  }
+
+// media
+@mixin mediaPC{
+  @media screen and (min-width:$break-point) {
+    @content
+  }
+}

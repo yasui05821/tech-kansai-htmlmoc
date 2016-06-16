@@ -1,0 +1,130 @@
+@import "../lib/_mixin";
+@import "../lib/_value";
+
+//about start
+  .about {
+    padding: 2.5em 0 3.5em;
+    text-align: center;
+    background: url("./../../image/about_bg.png");
+    background-size: cover;
+    .logo {
+      padding: 2em 0;
+    }
+  }
+  .about__ttl {
+    img {
+      max-width: 300px;
+      height: auto;
+    }
+  }
+  .about__description {
+    color: $clr-black;
+    line-height: 1.8em;
+    padding: 1em 0;
+  }
+//about end
+
+//article start
+  .articles {
+  }
+  .articles__ttl {
+    @include heading;
+  }
+  .articles__article {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $clr-gray2;
+    display: flex;
+    flex-direction:row;
+  }
+    //article themb
+      .article__thumb {
+        width:120px;
+        height: auto;
+        @include bg_stripe;
+      }
+      .article__thumb-img {
+        width:120px;
+        height: 100px;
+        background: url("http://placekitten.com/150/200");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .article__category {
+        height: 40px;
+        i {
+          margin-top: 15px;
+          margin-left: 10px;
+          color: #fff;
+          font-size: 10px;
+        }
+        span {
+          color: #fff;
+          font-size: 11px;
+        }
+      }
+      .category--prog {
+        background: $clr-prog;
+      }
+      .category--design {
+        background: $clr-design;
+      }
+      .category--other {
+        background: $clr-other;
+      }
+
+      .article__community {
+        padding: .3em;
+        display: block;
+        a {
+          font-size: .8em;
+        }
+      }
+
+    //article detail
+      .article__detail {
+        margin-left: 10px;
+        width: calc(50% + 10vw);
+      }
+      .article__ttl {
+        font-weight: bold;
+        color: $clr-black;
+      }
+      .article__text {
+        margin-top: .5em;
+        font-size: .8em;
+      }
+      .article__date {
+        margin-top: 1em;
+        display: block;
+        font-size: .8em;
+      }
+      .article__writer {
+        margin-top: .3em;
+        padding-top: 10px;
+        text-align: left;
+        height:30px;
+        border-top: 2px dotted $clr-gray3;
+        .writer-icon {
+          display: inline-block;
+          width:30px;
+          height:30px;
+          border-radius: 50%;
+          background: url("http://placekitten.com/100/82");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .writer-name {
+          vertical-align: top;
+          line-height: 30px;
+        }
+      }
+
+
+
+
+
+//article end

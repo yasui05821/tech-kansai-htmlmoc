@@ -1,4 +1,4 @@
-@import "common/_mixin";
+@import "lib/mixin";
 @import "lib/_value";
 
 @import "common/_newArticle";
@@ -10,15 +10,20 @@
   h1, h2, p, i, li, div, img {
     margin: 0;
   }
+}
+
+html {
+  font-size: calc(14px + 0.20vw);
   color: $clr-gray1;
 
   a {
     color: $clr-main;
+    text-decoration: none;
   }
 }
 
 .container {
-  padding: 3em;
+  padding: 0 1em;
 }
 // header start
   .header {
@@ -66,7 +71,8 @@
       display: inline-block;
     }
     i {
-      margin-top: 8px;
+      margin-top: 5px;
+      font-size: 2.2em;
       color: #fff;
     }
   }
@@ -75,6 +81,6 @@
 
 
 .contents-top {
-  @import "top/top";
+  @import "contents/_top";
 }
 
