@@ -9,7 +9,14 @@
 
   h1, h2, p, i, li, div, img {
     margin: 0;
+    margin-before: 0;
+    margin-after: 0;
+    margin-start: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
   }
+
 }
 
 html {
@@ -23,16 +30,25 @@ html {
 }
 
 .container {
-  padding: 0 1em;
+  padding: 0 $container;
 }
 // header start
   .header {
-    padding:10px 10px 15px;
-    background: url(./../../image/head_border.png);
-    background-repeat: repeat-x;
-    background-size: 250px;
-    background-position: bottom;
+    padding-top:10px;
+    width: 100vw;
+    height: 60px;
+    background: rgba(255,255,255,.9);
     @include clearfix;
+    position: fixed;
+    top: 0;
+    .container {
+      height: 100%;
+      background: url(./../../image/head_border.png);
+      background-repeat: repeat-x;
+      background-size: 250px;
+      background-position: bottom;
+    }
+
   }
 
   .header__logo {
@@ -81,6 +97,7 @@ html {
 
 
 .contents-top {
+  margin-top: 70px;
   @import "contents/_top";
 }
 

@@ -480,6 +480,7 @@ $hbcolor-shadow: #1761A2;
 }
 
 // -- new --
+
 //common
 @mixin clearfix {
   &:after {
@@ -517,3 +518,4 @@ $hbcolor-shadow: #1761A2;
     @content
   }
 }
+
