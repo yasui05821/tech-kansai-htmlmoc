@@ -149,9 +149,9 @@
   .event__time {
   }
   .event__ttl {
+    display: block;
     margin-top: 1.2em;
     font-weight: bold;
-    color: $clr-main;
   }
   .event__community {
     margin: 1em 0;

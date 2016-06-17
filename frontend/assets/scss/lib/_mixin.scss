@@ -96,11 +96,7 @@ $hbcolor-shadow: #1761A2;
   @include font-size(1.2);
   font-weight: normal;
 }
-@mixin h1 {
-  font-size: 1em;
-  text-align: center;
-  font-weight: normal;
-}
+
 @mixin h2 {
   @include font-size(1.6);
   text-align: center;
@@ -334,49 +330,7 @@ $hbcolor-shadow: #1761A2;
   margin-bottom: $bottom;
   margin-left: $left;
 }
-@mixin category-btn($dark, $bright) {
-  @include height-onFont(4.5);
-  width: 100%;
-  .btn-left, .btn-right {
-    height: 100%;
-    float: left;
-  }
-  .btn-left {
-    width: 75%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    box-sizing: border-box;
-    margin-left: 6.5%;
-    margin-bottom: 0.5em;
-    padding-left: 2em;
-    background: $dark;
-    color: white;
-    i, p {
-      @include line-height(4.5);
-      display: inline-block;
-      float: left;
-    }
-    i {
-      margin-left: 0.8em;
-    }
-    p {
-      margin-left: 1.5em;
-    }
-  }
-  .btn-right {
-    width: 12%;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin-left: 0;
-    background-color: $bright;
-    color: $dark;
-    i {
-      @include line-height(4.5);
-      @include font-size(3);
-      text-align: center;
-    }
-  }
-}
+
 @mixin line {
   @include reduction-onHeight(1.5);
   display: block;
@@ -535,154 +489,184 @@ $hbcolor-shadow: #1761A2;
         }
       }
     }
+
   // search
-// search__parts
-@mixin bgc-bright($value) {
-  @include height($value);
-  width: auto;
-  background-image: linear-gradient(
-      -45deg,
-      #6B6B6B 25%,
-      #646464 25%, #646464 50%,
-      #6B6B6B 50%, #6B6B6B 75%,
-      #646464 75%, #646464
-  );
-  background-size: 4px 4px;
-}
-@mixin bgc-dark($value) {
-  @include height($value);
-  width: auto;
-  background-image: linear-gradient(
-      -45deg,
-      #626262 25%,
-      #5B5B5B 25%, #5B5B5B 50%,
-      #626262 50%, #626262 75%,
-      #5B5B5B 75%, #5B5B5B
-  );
-  background-size: 4px 4px;
-}
-    .search {
-      .byArticle, .byCategory, .byTag, .byCommunity {
-        @include clearfix
-      }
-
-
-
-    }
-
-    .byArticle {
-      @include bgc-dark(0.07);
-      .title {
-        @include h1;
+    // search__parts
+      @mixin search-title($color:$clr-gray3) {
+        font-size: 1em;
+        text-align: center;
+        font-weight: normal;
         margin: 0;
         padding-top: 1.7em;
         padding-bottom: 0.9em;
-        color: white;
+        color: $color;
       }
-      .form {
-        @include height(0.02);
-        background-color: #777777;
+      @mixin bgc-bright($value) {
+        @include height($value);
+        width: auto;
+        background-image: linear-gradient(
+            -45deg,
+            #6B6B6B 25%,
+            #646464 25%, #646464 50%,
+            #6B6B6B 50%, #6B6B6B 75%,
+            #646464 75%, #646464
+        );
+        background-size: 4px 4px;
+      }
+      @mixin bgc-dark($value) {
+        @include height($value);
+        width: auto;
+        background-image: linear-gradient(
+            -45deg,
+            #626262 25%,
+            #5B5B5B 25%, #5B5B5B 50%,
+            #626262 50%, #626262 75%,
+            #5B5B5B 75%, #5B5B5B
+        );
+        background-size: 4px 4px;
+      }
+      @mixin category-btn($dark, $bright) {
+        display: inline-block;
+        width: 80vw;
+        max-width: 400px;
+        @include clearfix;
+        .btn-left, .btn-right {
+          height: 100%;
+          float: left;
+        }
+        .btn-left {
+          width: 80%;
+          border-radius: 5px 0 0 5px;
+          box-sizing: border-box;
+          padding-left: 2em;
+          background: $dark;
+          color: white;
+          i, p {
+            display: inline-block;
+            line-height: 45px;
+            float: left;
+          }
+          i {
+            margin-left: 0.8em;
+          }
+          p {
+            margin-left: 1.5em;
+          }
+        }
+        .btn-right {
+          height: 45px;
+          text-align: center;
+          width: 17%;
+          border-radius:  0 5px 5px 0;
+          margin-left: 0;
+          background-color: $bright;
+          color: $dark;
+          i {
+            line-height: 45px;
+            font-size: 2em;
+          }
+        }
+      }
+      // search__parts end
+    .search {
+    }
+    .search__by-keyword {
+      padding-bottom: 2em;
+      @include bgc-dark(0.07);
+
+      .search__ttl {
+        @include search-title(#fff);
+      }
+      .search__form {
+        margin: 0 auto;
+        width: 80%;
+        max-width: 600px;
+        text-align: left;
+        background-color: $clr-gray1;
         border: 1px solid white;
-        border-radius: 22px;
-        width: 86%;
-        margin-left: auto;
-        margin-right: auto;
+        border-radius: 100px;
       }
-      .fa-search, input {
-        float: left;
-      }
-      .fa-search {
-        @include font-size(2.8);
-        margin-top: 0.23em;
-        margin-left:0.4em;
-        color: #CDCDCD;
+      i {
+        font-size: 1.6em;
+        margin-left: .5em;
+        color: $clr-gray3;
       }
       input {
-        @include height(0.02);
-        box-sizing: border-box;
-        margin-left: 0.4em;
-        border: none;
-        background-color: #777777;
-        color: white;
+        margin-left: .5em;
+        padding: .7em 0;
         width: 70%;
+        color: #fff;
+        border: none;
+        box-sizing: border-box;
+        background-color: $clr-gray1;
       }
     }
 
+    .search__by-category {
+      padding-bottom: 2em;
+      @include bgc-bright(0.12);
+      text-align: center;
 
-.byCategory {
-  @include bgc-bright(0.12);
-  .title {
-    @include h2;
-    padding: 1.4em;
-    color: $search-title;
-  }
-  .programing {
-    @include category-btn($clr-prog, $clr-prog-bright);
-  }
-  .design {
-    @include category-btn($clr-design, $clr-design-bright);
-  }
-  .thinking {
-    @include category-btn($clr-other, $clr-other-bright);
-  }
-}
+      .search__ttl {
+        @include search-title;
+      }
+      .category__programing {
+        text-align: center;
+        .category__btn {
+          @include category-btn($clr-prog, $clr-prog-bright);
+        }
+      }
+      .category__design {
+        text-align: center;
+        .category__btn {
+          @include category-btn($clr-design, $clr-design-bright);
+        }
+      }
+      .category__other {
+        text-align: center;
+        .category__btn {
+          @include category-btn($clr-other, $clr-other-bright);
+        }
+      }
+    }
 
-.byTag {
-  @include bgc-dark(0.075);
-  clear: both;
-  .title {
-    @include h2;
-    padding: 1.4em;
-    color: $search-title;
-  }
-  .tags {
-    text-align: center;
-    .tag {
-      @include a-color;
-      @include font-size(1.6);
-      @include line-height(2.8);
-      padding: 0 0.7em;
+    .search__by-tag {
+      padding-bottom: 2em;
+      @include bgc-dark(0.075);
+      .search__ttl {
+        @include search-title;
+      }
+      .search__tags {
+        text-align: center;
+        .search__tag {
+          line-height: 2em;
+          margin: 0 0.7em;
+        }
+      }
     }
-  }
-}
 
-.byCommunity {
-  @include bgc-bright(0.145);
-  //box-sizing: border-box;
-  .title {
-    @include h2;
-    padding: 1.4em;
-    color: $search-title;
-  }
-  .community {
-    @include height(0.045);
-    text-align: center;
-    background-color: white;
-    width: 47%;
-  }
-  .left {
-    @include block-left;
-    margin-top: 0;
-    margin-bottom: 0.4em;
-    margin-right: 0;
-    margin-left: 2.3%;
-  }
-  .right {
-    @include block-right;
-    margin-top: 0;
-    margin-bottom: 0.4em;
-    margin-right: 2.3%;
-    margin-left: 0;
-  }
-  .community {
-    .community-picture {
-      margin-top: 0.7em;
-      margin-bottom: 0.7em;
+    .search__by-community {
+      @include bgc-bright(0.145);
+      padding-bottom: 2em;
+      height: 100%;
+      .search__ttl {
+        @include search-title;
+      }
+      .search__community {
+        margin-top: 1em;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        //flex-wrap:         nowrap;
+        //align-content:         stretch;
+        .community {
+          min-width: 100px;
+          padding: .5em;
+          margin-bottom: 1em;
+
+          text-align: center;
+          background: white;
+        }
+      }
     }
-    p {
-      @include font-size(1.4);
-      color: $date-color;
-    }
-  }
-}
 

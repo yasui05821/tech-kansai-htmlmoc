@@ -2,7 +2,7 @@
 
 #newArticle .title {
   @include line-height(5.5);
-  @include h1;
+  @include search-title;
   text-align: center;
 }
 
