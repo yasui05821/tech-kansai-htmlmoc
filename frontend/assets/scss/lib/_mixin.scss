@@ -7,13 +7,7 @@
 @mixin width-onFont ($value) {
   width: $value * 10px;
 }
-@mixin height-onFont ($value) {
-  height: $value * 10px;
-}
-@mixin reduction-onHeight($height) {
-  @include height-onFont($height);
-  width: auto;
-}
+
 @mixin blog-padding($top-bottom) {
   padding: $top-bottom + em 0.4em;
 }
@@ -68,7 +62,6 @@
   margin-right: auto;
   margin-bottom: 2em;
   .quotation {
-    @include reduction-onHeight(1.4);
   }
   .left {
     margin-top: 0.5em;
@@ -171,75 +164,13 @@
     }
   }
 }
-@mixin snscount {
-  @include height-onFont(1.8);
-  padding: 0;
-  float: left;
-  margin-right: 0.5em;
-  .twitter-icon {
-    @include reduction-onHeight(1.2);
-    margin-top: 0.2em;
-    margin-left: 0.3em;
-    margin-right: 0.2em;
-    //@include line-height(1.8);
-  }
-  .facebook-icon {
-    @include reduction-onHeight(1.4);
-    margin-top: 0.15em;
-    margin-left: 0.5em;
-    margin-right: 0.4em;
-  }
-  .hatebu-icon {
-    @include reduction-onHeight(1.1);
-    margin-top: 0.2em;
-    margin-left: 0.4em;
-    margin-right: 0.3em;
-  }
-  .snscount-left, .snscount-right {
-    float: left;
-    height: 100%;
-  }
-  .snscount-left {
-    @include width-onFont(7);
-    img, p {
-      float: left;
-    }
-    p {
-      @include line-height(1.8);
-      @include font-size(1);
-    }
-  }
-  .snscount-right {
-    @include width-onFont(1.7);
-    p {
-      @include line-height(1.8);
-      @include font-size(1.2);
-      text-align: center;
-    }
-  }
-}
+
 
 @mixin categoryBtn-margin($top, $right, $bottom, $left) {
   margin-top: $top;
   margin-right: $right;
   margin-bottom: $bottom;
   margin-left: $left;
-}
-
-@mixin line {
-  @include reduction-onHeight(1.5);
-  display: block;
-  margin: 0.8em auto;
-}
-@mixin community-tag {
-  @include font-size(1.1);
-  @include line-height(2.4);
-  box-sizing: border-box;
-  padding: 0.2em 1em;
-  border-radius: 3px;
-  display: inline-block;
-  color: white;
-  background-color: $link-color;
 }
 @mixin icon-custom($radius) {
   border-radius: $radius + px;

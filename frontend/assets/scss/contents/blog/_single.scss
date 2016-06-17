@@ -7,7 +7,6 @@
     font-weight: normal;
   }
   .blog__date {
-
   }
   .blog__writer {
     @include article__writer;
@@ -28,8 +27,8 @@
     font-size: $font-sm;
 
     .sns__btn {
+      margin-bottom: .5em;
       display: inline-block;
-      //height: 20px;
       @include clearfix;
     }
     .sns__title {
@@ -88,21 +87,21 @@
       line-height: 1.5em;
     }
     .blog__h2 {
-      margin-top: 0.8em;
+      margin-top: 4em;
       margin-bottom: 0.8em;
       padding: 1em;
       font-size: 1.2em;
       background-color: $clr-blog-h2;
     }
     .blog__h3 {
-      margin-top: 0.8em;
+      margin-top: 4em;
       margin-bottom: 0.8em;
       padding: .5em 0;
       font-size: 1.1em;
       border-bottom: 3px solid $clr-blog-h3;
     }
     .blog__h4 {
-      margin: 0.8em 0 1em;
+      margin: 4em 0 1em;
       padding: .5em 1em;
       font-size: 1.1em;
       border-left: 8px solid $clr-blog-h3;
@@ -161,37 +160,148 @@
       border-top: 2px dotted $clr-gray3
     }
     .blog__quotation {
-      background-color: $blockquote-color;
-      box-sizing: border-box;
-      border-radius: 4px;
-      width: 88%;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 1em;
+      padding: .5em .8em;
+      background-color: $clr-blc-quotation;
+      border-radius: 6px;
       margin-bottom: 2em;
-      .quotation {
+      &::before{
+        content:" ";
+        display:inline-block;
+        padding: 1em 1em 0;
+        width: 100%;
+        height: 2em;
+        background:url("./../../image/q-l.png");
+        background-size: 2em;
+        background-repeat: no-repeat;
+        background-position: left;
       }
-      .left {
-        margin-top: 0.5em;
-        margin-left: 0.5em;
-      }
-      .right {
-        margin-bottom: 0.5em;
-        margin-right: 0.5em;
-        float: right;
+      &::after{
+        content:" ";
+        display:inline-block;
+        width: 100%;
+        height: 2em;
+        background:url("./../../image/q-r.png");
+        background-size: 2em;
+        background-repeat: no-repeat;
+        background-position: right;
       }
       p {
-        @include font-size(1.4);
-        @include line-height(2.1);
-        padding: 1em 1.5em;
-        margin-left: auto;
-        margin-right: auto;
+        padding: 0 1.5em;
       }
     }
-    .line {
-      @include line;
+    .blog-end__line {
+      margin: 3em auto 1em;
+      width: 100%;
+      height: 23px;
+      background: url("./../../image/line.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
+
+    // blog-footer start
+    .blog__tags {
+      text-align: left;
+      margin: 3em 0 1em;
+      .blog__tag {
+        line-height: 2em;
+        margin: 0 0.7em;
+      }
+    }
+    .blog__community {
+    }
+    .blog__writer-profile {
+      margin: 2em auto;
+      border: 1px solid #CDCDCD;
+      text-align: center;
+
+      .writer-profile__ttl {
+        @include heading--bg;
+        margin: 0;
+        padding: .5em;
+      }
+      .writer-profile_contents {
+        padding: 1em;
+      }
+      .writer-icon {
+        margin: 1.5em 0 .5em;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 400px;
+        background-image: url("http://placekitten.com/400/400");
+        background-size: cover;
+      }
+      .writer-name {
+        font-size: 1.2em;
+      }
+      .writer-skill {
+        color: $clr-gray2;
+      }
+      .writer-sns__icon {
+        margin: .7em 0 1.5em;
+        display: inline-block;
+        padding: .5em;
+        width: 1.2em;
+        height: 1.2em;
+        border-radius: .3em;
+
+      }
+      .writer-sns--tw {
+        border: 1px solid $clr-tw-dark;
+        i{
+          font-size: 1.3em;
+          color: $clr-tw-dark;
+        }
+      }
+      .writer-sns--fb {
+        border: 1px solid $clr-fb-dark;
+        i{
+          font-size: 1.3em;
+          color: $clr-fb-dark;
+        }
+      }
+    }
+    .share-sns {
+      @include clearfix;
+      margin-bottom: 4em;
+      .twitter, .facebook {
+        margin-right: 3%;
+      }
+      .share-sns__btn {
+        display: inline-block;
+        width:30%;
+        text-align: center;
+        color: white;
+        img {
+          margin: 1em .3em 1em;
+          vertical-align: bottom;
+          height: 15px;
+        }
+        span {
+
+          display: inline-block;
+          line-height: 45px;
+        }
+      }
+      .twitter {
+        @include shadow-box($clr-tw-dark, white, $clr-tw-shadow);
+      }
+      .facebook {
+        @include shadow-box($clr-fb-dark, white, $clr-fb-shadow);
+      }
+      .hatebu {
+        @include shadow-box($clr-hb-dark, white, $clr-hb-shadow);
+      }
+    }
+
   }
 // blog-content end
+
+
+
+
 
 .articles {
   @include article;
