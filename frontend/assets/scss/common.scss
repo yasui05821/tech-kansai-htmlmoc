@@ -2,13 +2,13 @@
 @import "lib/_value";
 
 @import "common/_newArticle";
-@import "common/_footer";
 
 *{
   @include font-style;
 
-  h1, h2, p, i, li, div, img {
+  h1, h2, p, i, dl,ul, li, div, img {
     margin: 0;
+    padding: 0;
     margin-before: 0;
     margin-after: 0;
     margin-start: 0;
@@ -26,6 +26,9 @@ html {
   a {
     color: $clr-main;
     text-decoration: none;
+  }
+  a:hover {
+    color: $clr-gray2;
   }
 }
 
@@ -64,18 +67,18 @@ html {
   }
 
   //search start
-  .search {
+  .header .search {
     float: right;
   }
-  .search__input {
+  .header .search__input {
     display: none;
   }
 
-  .search__btn {
+  .header .search__btn {
     display: none;
   }
 
-  .search__btn--sp {
+  .header .search__btn--sp {
     display: inline-block;
     text-align: center;
     width: 40px;
@@ -87,8 +90,8 @@ html {
       display: inline-block;
     }
     i {
-      margin-top: 5px;
-      font-size: 2.2em;
+      margin-top: 8px;
+      font-size: 1.6em;
       color: #fff;
     }
   }
@@ -101,3 +104,34 @@ html {
   @import "contents/_top";
 }
 
+// contact start
+.contact {
+  @include contact;
+}
+
+// footer start
+  .site-map {
+    padding: 1em 0 1em;
+    background: $clr-gray3;
+  }
+  .site-map__group {
+    margin: 1em 0;
+    padding: .5em $container;
+    background: rgba(255,255,255,.8);
+  }
+  .site-map__link {
+    margin-bottom: .3em;
+    a {
+      display: inline-block;
+      @include link-style--triangle;
+    }
+    a:hover {
+      @include link-style--triangle($clr-gray2);
+    }
+  }
+  .copyright {
+    text-align: center;
+    background-color: #F5A22F;
+    color: white;
+  }
+// footer end

@@ -15,9 +15,9 @@
          <div class="container">
              <h1 class="header__logo"><img src="./image/logo.png" alt="Tech Tech Kansai"></h1>
              <div class="search">
-                 <div class="search__input"><i class="material-icons">&#xE8B6;</i></div>
+                 <div class="search__input"></div>
                  <div class="search__btn">詳細検索</div>
-                 <div class="search__btn--sp"><a href="#"><i class="material-icons">&#xE8B6;</i></a></div>
+                 <div class="search__btn--sp"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
              </div>
          </div>
     </div>
@@ -359,116 +359,125 @@
                 </div>
             </div>
         </div>
-
-
-        <nav class="info">
-        <ul>
-            <li><a href="">はじめて勉強会に参加する人へ</a></li>
-        </ul>
-    </nav>
+        <nav class="information">
+            <ul>
+                <li class="information__item">
+                    <a href=""><i class="fa fa-gratipay" aria-hidden="true"></i>はじめて勉強会に参加する方へ</a>
+                </li>
+                <li class="information__item">
+                    <a href=""><i class="fa fa-group" aria-hidden="true"></i>関西のコミュニティ紹介</a>
+                </li>
+                <li class="information__item">
+                    <a href=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ブログ書いてみませんか？</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <div id="footer">
-        <div class="search">
-            <div class="byArticle">
-                <h1 class="title">記事をさがす</h1>
-                <div class="form">
-                    <i class="fa fa-search"></i>
-                    <input type="text" placeholder="てきすとがはいります">
+    <div class="contact">
+        <p class="contact__message">運営に関するお問い合わせはこちら</p>
+        <div class="contact__btn"><a href="">お問い合わせ</a></div>
+    </div>
+    <div class="search">
+        <div class="byArticle">
+            <h1 class="title">記事をさがす</h1>
+            <div class="form">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="てきすとがはいります">
+            </div>
+        </div>
+
+        <div class="byCategory">
+            <h2 class="title">カテゴリからさがす</h2>
+
+            <div class="programing category">
+                <div class="btn-left">
+                    <i class="material-icons">build</i>
+                    <p>プログラミング</p>
+                </div>
+                <div class="btn-right">
+                    <i class="fa fa-angle-right"></i>
                 </div>
             </div>
 
-            <div class="byCategory">
-                <h2 class="title">カテゴリからさがす</h2>
-
-                <div class="programing category">
-                    <div class="btn-left">
-                        <i class="material-icons">build</i>
-                        <p>プログラミング</p>
-                    </div>
-                    <div class="btn-right">
-                        <p>+</p>
-                    </div>
+            <div class="design category">
+                <div class="btn-left">
+                    <i class="material-icons">mode_edit</i>
+                    <p>デザイン</p>
                 </div>
-
-                <div class="design category">
-                    <div class="btn-left">
-                        <i class="material-icons">mode_edit</i>
-                        <p>デザイン</p>
-                    </div>
-                    <div class="btn-right">
-                        <p>+</p>
-                    </div>
-                </div>
-
-                <div class="thinking category">
-                    <div class="btn-left">
-                        <i class="material-icons">lightbulb_outline</i>
-                        <p>考え方・その他</p>
-                    </div>
-                    <div class="btn-right">
-                        <p>+</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="byTag">
-                <h2 class="title">タグからさがす</h2>
-                <div class="tags">
-                    <a href="" class="tag">#jQuery</a>
-                    <a href="" class="tag">#PHP</a>
-                    <a href="" class="tag">#UI</a>
-                    <a href="" class="tag">#Photoshop</a>
-                    <a href="" class="tag">#jQuery</a>
-                    <a href="" class="tag">#PHP</a>
-                    <a href="" class="tag">#UI</a>
-                    <a href="" class="tag">#Photoshop</a>
+                <div class="btn-right">
+                    <i class="fa fa-angle-right"></i>
                 </div>
             </div>
 
-            <div class="byCommunity">
-                <h2 class="title">コミュニティからさがす</h2>
-                <div class="community left">
-                    <img class="community-picture" src="http://placehold.it/42x42" alt="">
-                    <p>関西フロントエンドUG</p>
+            <div class="thinking category">
+                <div class="btn-left">
+                    <i class="material-icons">lightbulb_outline</i>
+                    <p>考え方・その他</p>
                 </div>
-                <div class="community right">
-                    <img class="community-picture" src="http://placehold.it/42x42" alt="">
-                    <p>LecCafe</p>
-                </div>
-                <div class="community left">
-                    <img class="community-picture" src="http://placehold.it/42x42" alt="">
-                    <p>関西フロントエンドUG</p>
-                </div>
-                <div class="community right">
-                    <img class="community-picture" src="http://placehold.it/42x42" alt="">
-                    <p>LecCafe</p>
+                <div class="btn-right">
+                    <i class="fa fa-angle-right"></i>
                 </div>
             </div>
         </div>
 
-        <div class="contact">
-            <p class="contactMessage">運営に関するお問い合わせはこちら</p>
-            <div class="contactBtn">お問い合わせ</div>
+        <div class="byTag">
+            <h2 class="title">タグからさがす</h2>
+            <div class="tags">
+                <a href="" class="tag">#jQuery</a>
+                <a href="" class="tag">#PHP</a>
+                <a href="" class="tag">#UI</a>
+                <a href="" class="tag">#Photoshop</a>
+                <a href="" class="tag">#jQuery</a>
+                <a href="" class="tag">#PHP</a>
+                <a href="" class="tag">#UI</a>
+                <a href="" class="tag">#Photoshop</a>
+            </div>
         </div>
-        <div class="container">
-            <dl>
-                <dt>
-                    Tech Tech Kansai
-                </dt>
-                <dd>はじめて勉強会に参加する人へ</dd>
-                <dd>はじめて勉強会に参加する人へ</dd>
-                <dd>はじめて勉強会に参加する人へ</dd>
-                <dd>はじめて勉強会に参加する人へ</dd>
-            </dl>
+
+        <div class="byCommunity">
+            <h2 class="title">コミュニティからさがす</h2>
+            <div class="community left">
+                <img class="community-picture" src="http://placehold.it/42x42" alt="">
+                <p>関西フロントエンドUG</p>
+            </div>
+            <div class="community right">
+                <img class="community-picture" src="http://placehold.it/42x42" alt="">
+                <p>LecCafe</p>
+            </div>
+            <div class="community left">
+                <img class="community-picture" src="http://placehold.it/42x42" alt="">
+                <p>関西フロントエンドUG</p>
+            </div>
+            <div class="community right">
+                <img class="community-picture" src="http://placehold.it/42x42" alt="">
+                <p>LecCafe</p>
+            </div>
         </div>
+    </div>
+    <div class="footer">
+
+        <dl class="site-map">
+            <dt class="site-map__group">
+                Tech Tech Kansai</dt>
+            <dd class="site-map__link"><a href="">はじめて勉強会に参加する人へ</a></dd>
+            <dd class="site-map__link"><a href="">関西のコミュニティ紹介</a></dd>
+            <dd class="site-map__link"><a href="">ブログ書いてみませんか？</a></dd>
+            <dd class="site-map__link"><a href="">お問合わせ</a></dd>
+        </dl>
+        <dl class="site-map">
+            <dt class="site-map__group">ブログ</dt>
+            <dd class="site-map__link"><a href="">ブログ一覧</a></dd>
+            <dd class="site-map__link"><a href="">投稿ユーザ一覧</a></dd>
+        </dl>
+        <dl class="site-map">
+            <dt class="site-map__group">イベント</dt>
+            <dd class="site-map__link"><a href="">イベント一覧</a></dd>
+        </dl>
         <div class="copyright">
             <div class="container">
                 <small>Copyright © Tech Tech Kansai</small>
             </div>
         </div>
-
-
-
+    </div>
 </body>
 </html>

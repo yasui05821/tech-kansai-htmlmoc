@@ -1,7 +1,7 @@
 @import "../lib/_mixin";
 @import "../lib/_value";
 
-//about start
+// about start
   .about {
     padding: 2.5em 0 3.5em;
     text-align: center;
@@ -22,9 +22,9 @@
     line-height: 1.8em;
     padding: 1em 0;
   }
-//about end
+// about end
 
-//article start
+// article start
   .articles {
   }
   .articles__ttl {
@@ -38,7 +38,7 @@
     display: flex;
     flex-direction:row;
   }
-    //article themb
+    // article themb
       .article__thumb {
         width:120px;
         height: auto;
@@ -83,7 +83,7 @@
         }
       }
 
-    //article detail
+    // article detail
       .article__detail {
         margin-left: 10px;
         width: calc(50% + 10vw);
@@ -122,9 +122,9 @@
           line-height: 30px;
         }
       }
-//article end
+// article end
 
-//events start
+// events start
   .events {
 
   }
@@ -187,20 +187,33 @@
     text-align: right;
     a {
       display: inline-block;
-      position: relative;
-      &::before {
-        content: "";
-        display: inline-block;
-        border: 8px solid transparent;
-        border-left-color: $clr-main;
-        position: absolute;
-        top: 50%;
-        left:-15px;
-        margin-top: -8px;
-
-      }
+      @include link-style--triangle;
+    }
+    a:hover {
+      @include link-style--triangle($clr-gray2);
     }
 
   }
+// events end
 
-//events end
+// information start
+  .information {
+    margin-top: 3em;
+  }
+  .information__item {
+    margin-bottom: 2px;
+    list-style: none;
+    box-sizing: border-box;
+    border-left: 10px solid $clr-main;
+    box-shadow: 0 0 2px #ccc;
+    i {
+      margin-right: 10px;
+      font-size: 1.5em;
+    }
+    a {
+      display: block;
+      padding: 2em;
+      background: #fff;
+    }
+  }
+// information end
