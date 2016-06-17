@@ -1,8 +1,5 @@
-@import "lib/mixin";
+@import "lib/_mixin";
 @import "lib/_value";
-
-@import "common/_newArticle";
-
 *{
   @include font-style;
 
@@ -44,6 +41,7 @@ html {
     @include clearfix;
     position: fixed;
     top: 0;
+    z-index:10;
     .container {
       height: 100%;
       background: url(./../../image/head_border.png);
@@ -100,8 +98,13 @@ html {
 
 
 .contents-top {
-  margin-top: 70px;
+  margin-top: $header-size;
   @import "contents/_top";
+}
+.contents-blog {
+  margin-top: $header-size;
+  padding-top: .5em;
+  @import "contents/blog/_single";
 }
 
 // contact start

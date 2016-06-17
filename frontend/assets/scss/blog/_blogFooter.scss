@@ -2,9 +2,6 @@
 
 
 #blog .footer {
-  .tags, .community, .push-sns {
-    @include blog-width;
-  }
   .tags {
     margin-top: 1.3em;
     margin-bottom: 1.3em;
@@ -49,10 +46,9 @@
       }
       .sns {
         .twitter {
-          @include sns-cube($twcolor-dark, 1.4em);
-        }
+          @include sns-cube($clr-tw-dark, 1.4em);
         .facebook {
-          @include sns-cube($fbcolor-dark, 1.4em);
+          @include sns-cube($clr-fb-dark, 1.4em);
         }
       }
     }
@@ -84,13 +80,14 @@
       }
     }
     .twitter {
-      @include shadow-box($twcolor-dark, white, $twcolor-shadow);
+      @include shadow-box($clr-tw-dark, white, $clr-tw-shadow);
     }
     .facebook {
-      @include shadow-box($fbcolor-dark, white, $fbcolor-shadow);
+      @include shadow-box($clr-fb-dark, white, $clr-fb-shadow);
     }
     .hatebu {
-      @include shadow-box($hbcolor-dark, white, $hbcolor-shadow);
+      @include shadow-box($clr-hb-dark, white, $clr-hb-shadow);
     }
   }
+}
 }

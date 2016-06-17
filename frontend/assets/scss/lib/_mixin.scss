@@ -14,17 +14,8 @@
   @include height-onFont($height);
   width: auto;
 }
-@mixin blog-width  {
-  box-sizing: border-box;
-  width: 95% ;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
 @mixin blog-padding($top-bottom) {
   padding: $top-bottom + em 0.4em;
-}
-@mixin paragraph-padding {
-  padding: 0 0.4em 1.8em 0.4em;
 }
 // 初期設定
 @mixin font-size($value) {
@@ -36,43 +27,11 @@
 @mixin font-style {
   font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","Osaka",sans-serif;
 }
-// 配置
-@mixin block-left {
-  float: left;
-  border: none;
-}
-@mixin block-right {
-  float: right;
-  border: none;
-}
-
-// 色
-$link-color: #ECA443;
-$hr-color: #ECEDEE;
-$tableTitle-color: #FAF8F5;
-$blockquote-color: #F5F6F7;
-$endline-color: #F0EAE2;
-$date-color: #777777;
-$search-title: #CCCCCC;
-
-$blog-h2: #EBE3DA;
-$blog-h3: #E6DCD0;
-$blog-h4: #E1D6C6;
-$blog-list: #D7C8B3;
 
 
 
-$twcolor-dark: #5FADEE;
-$twcolor-bright: #C6DDF1;
-$twcolor-shadow: #4287C0;
 
-$fbcolor-dark: #325A9A;
-$fbcolor-bright: #BBCBE7;
-$fbcolor-shadow: #204378;
 
-$hbcolor-dark: #2184DE;
-$hbcolor-bright: #A5B9CA;
-$hbcolor-shadow: #1761A2;
 
 @mixin bgc-tech {
   background-color: #ECA443;
@@ -87,82 +46,18 @@ $hbcolor-shadow: #1761A2;
   background-color: #8A7B6E;
 }
 // タグ
-@mixin photo{
-  @include blog-width;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
 @mixin thumbnail-title {
   @include font-size(1.2);
   font-weight: normal;
 }
 
-@mixin h2 {
-  @include font-size(1.6);
-  text-align: center;
-  font-weight: normal;
-}
-@mixin blog-p {
-  @include blog-width;
-  @include paragraph-padding;
-  @include font-size(1.4);
-  @include line-height(2.1);
-}
-@mixin blog-h1 {
-  @include font-size(1.9);
-  @include line-height(2.3);
-  margin-top: 1.2em;
-  font-weight: normal;
-}
-@mixin blog-h2 {
-  @include font-size(1.6);
-  @include blog-width;
-  @include blog-padding(0.9);
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-  background-color: $blog-h2;
-}
-@mixin blog-h3 {
-  @include font-size(1.5);
-  @include blog-width;
-  @include blog-padding(0.6);
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-  border-bottom: 3px solid $blog-h3;
-}
-@mixin blog-h4 {
-  @include font-size(1.5);
-  @include blog-width;
-  @include blog-padding(0.6);
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-  border-left: 3px solid #E1D6C6;
-}
-@mixin list {
-  @include blog-width;
-  @include font-size(1.4);
-  @include line-height(3);
-  margin-bottom: 2em;
-  list-style-type: square;
-  .point {
-    list-style: none;
-    &:before {
-      @include font-size(1.2);
-      margin-right: 1em;
-      content: "■";
-      color: $blog-list;
-    }
-  }
-  span {
-    color: black;
-  }
-}
-@mixin a-color {
-  color: $link-color;
-}
+
+
+
+
+
 @mixin hr {
-  border: 1px solid $hr-color;
-  width: 92%;
+
 }
 @mixin blockquote {
   background-color: $blockquote-color;
@@ -384,26 +279,6 @@ $hbcolor-shadow: #1761A2;
   font-weight: normal;
 }
 
-@mixin table($value) {
-  @include blog-width;
-  padding-bottom: 2em;
-  table {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  table, td, th {
-    border: 1px solid #CDCDCD;
-    border-collapse: collapse;
-  }
-  thead {
-    background-color: $tableTitle-color;
-  }
-  th, td {
-    @include font-size(1.4);
-    width: $value * 100%;
-    padding: 0.7em 1em;
-  }
-}
 
 
 @mixin block {
@@ -667,6 +542,129 @@ $hbcolor-shadow: #1761A2;
           text-align: center;
           background: white;
         }
+        .community__icon {
+          display: inline-block;
+          width: 42px;
+          height: 42px;
+          background-image: url("http://placekitten.com/50/50");
+          background-size: cover;
+        }
       }
     }
+
+  // blog
+    @mixin article__writer{
+      margin-top: .3em;
+      padding-top: 10px;
+      text-align: left;
+      height:30px;
+      border-top: 2px dotted $clr-gray3;
+    }
+    @mixin writer-icon {
+      display: inline-block;
+      width:30px;
+      height:30px;
+      border-radius: 50%;
+      background: url("http://placekitten.com/100/82");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    @mixin writer-name{
+      display: inline-block;
+      vertical-align: top;
+      line-height: 30px;
+    }
+    // article
+      @mixin article {
+        // article start
+        .articles {
+        }
+        .articles__ttl {
+          @include heading;
+        }
+        .articles__article {
+          margin-top: 10px;
+          padding-bottom: 20px;
+          box-sizing: border-box;
+          border-bottom: 1px solid $clr-gray2;
+          display: flex;
+          flex-direction:row;
+        }
+        // article themb
+        .article__thumb {
+          width:120px;
+          height: auto;
+          @include bg_stripe;
+        }
+        .article__thumb-img {
+          width:120px;
+          height: 100px;
+          background: url("http://placekitten.com/150/200");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .article__category {
+          height: 40px;
+          i {
+            margin-top: 15px;
+            margin-left: 10px;
+            color: #fff;
+            font-size: 10px;
+          }
+          span {
+            color: #fff;
+            font-size: 11px;
+          }
+        }
+        .category--prog {
+          background: $clr-prog;
+        }
+        .category--design {
+          background: $clr-design;
+        }
+        .category--other {
+          background: $clr-other;
+        }
+
+        .article__community {
+          padding: .3em;
+          display: block;
+          a {
+            font-size: $font-sm;
+          }
+        }
+
+        // article detail
+        .article__detail {
+          margin-left: 10px;
+          width: calc(50% + 10vw);
+        }
+        .article__ttl {
+          font-weight: bold;
+          color: $clr-black;
+        }
+        .article__text {
+          margin-top: 1em;
+          font-size: $font-sm;
+          text-overflow: ellipsis;
+        }
+        .article__date {
+          margin-top: 1.2em;
+          display: block;
+          font-size: $font-sm;
+        }
+        .article__writer {
+            @include article__writer;
+          .writer-icon {
+            @include writer-icon;
+          }
+          .writer-name {
+            @include writer-name;
+          }
+        }
+        // article end
+      }
+
 

@@ -1,17 +1,19 @@
-//container
+$header-size:70px;
+
+// container
 $container: 1em;
 
-//text
+// text
   $font-sm: .8em;
 
-//colors
+// colors
   $clr-main: #F5A22F;
   $clr-black: #71706F;
   $clr-gray1: #8A8887;
   $clr-gray2: #CCCCCC;
   $clr-gray3: #EDECEB;
 
-  //category
+  // category
   $clr-prog: #4AB1BD;
   $clr-prog-bright: #CEF3F7;
   $clr-design: #DC8692;
@@ -19,5 +21,34 @@ $container: 1em;
   $clr-other: #9997CB;
   $clr-other-bright: #F1F0FF;
 
-//メディアクエリ
+  // sns
+  $clr-tw-dark: #5FADEE;
+  $clr-tw-bright: #C6DDF1;
+  $clr-tw-shadow: #4287C0;
+
+  $clr-fb-dark: #325A9A;
+  $clr-fb-bright: #BBCBE7;
+  $clr-fb-shadow: #204378;
+
+  $clr-hb-dark: #2184DE;
+  $clr-hb-bright: #B8D2E6;
+  $clr-hb-shadow: #1761A2;
+
+
+// 色
+$link-color: #ECA443;
+$hr-color: #ECEDEE;
+$clr-blog-tableTitle: #FAF8F5;
+$blockquote-color: #F5F6F7;
+$endline-color: #F0EAE2;
+$date-color: #777777;
+$search-title: #CCCCCC;
+
+$clr-blog-h2: #EBE3DA;
+$clr-blog-h3: #E6DCD0;
+$clr-blog-h4: #E1D6C6;
+$clr-blog-li: #D7C8B3;
+
+
+// media
 $break-point: 800px; //PC表示
