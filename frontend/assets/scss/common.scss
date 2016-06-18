@@ -28,7 +28,9 @@ html {
     color: $clr-gray2;
   }
 }
-
+.sp--none {
+  display: none;
+}
 .container {
   padding: 0 $container;
 }
@@ -96,10 +98,35 @@ html {
   //search end
 //header end
 
+// common contents start
+// about start
+.about {
+  @include about;
+}
+// about end
+.articles {
+  @include article;
+}
+
+.events {
+  @include event;
+}
+
+.information {
+ @include infomation;
+}
+
+.contact {
+  @include contact;
+}
+
+// common contents start end
 
 .contents-top {
   margin-top: $header-size;
-  @import "contents/_top";
+  @include mediaPC {
+    margin-top:0;
+  }
 }
 .contents-blog {
   margin-top: $header-size;
@@ -107,10 +134,6 @@ html {
   @import "contents/blog/_single";
 }
 
-// contact start
-.contact {
-  @include contact;
-}
 
 // footer start
   .site-map {
@@ -167,3 +190,94 @@ html {
     color: white;
   }
 // footer end
+
+// PC表示
+@include mediaPC{
+  //none
+  .sp--none {
+    display: block;
+  }
+  .pc--none {
+    display: none;
+
+
+  }
+  // カラム設定
+  .pc-colmn-wrap {
+    margin: 0 auto;
+    max-width:1200px;
+    display: flex;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+  }
+  // pc-colum-left start
+
+  .pc-column-left {
+    margin-top: $header-size;
+    width: 185px;
+    border-right: 1px solid $clr-gray3;
+
+    img {
+      width: 100%;
+    }
+    .about {
+      border-left: 1px solid $clr-gray3;
+      .about__description {
+        font-size: $font-sm;
+      }
+    }
+    .information{
+      margin: 0;
+      i {
+
+        font-size: 2em;
+        margin-bottom: .3em;
+      }
+      a {
+        font-size: $font-sm;
+      }
+    }
+    .contact {
+      border-left: 1px solid $clr-gray3;
+      border-bottom: 1px solid $clr-gray3;
+      font-size: $font-sm;
+      a {
+        padding: .4em 2em;
+      }
+    }
+  }
+  // pc-colum-center start
+  .pc-column-center {
+    margin-top: $header-size;
+  }
+
+  //pc-colum-right start
+  .pc-column-right {
+    margin-top: $header-size;
+    border-left: 1px solid $clr-gray3;
+    width: 195px;
+    .events {
+      border-right: 1px solid $clr-gray3;
+      font-size: $font-sm;
+      .container {
+        padding: 0 .5em;
+      }
+    }
+    .events__ttl {
+      margin: 0;
+    }
+    .event__prefectures {
+      margin-bottom: .5em;
+      display: block;
+      width: 3em;
+    }
+    .event__date {
+      margin: 0 .3em 0 0;
+    }
+    .event__place {
+      margin: .5em 0;
+      display: block;
+    }
+  }
+
+}
