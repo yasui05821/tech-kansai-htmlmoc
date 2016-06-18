@@ -214,7 +214,8 @@ html {
 
   .pc-column-left {
     margin-top: $header-size;
-    width: 185px;
+    min-width: 185px;
+    max-width: 185px;
     border-right: 1px solid $clr-gray3;
 
     img {
@@ -255,7 +256,8 @@ html {
   .pc-column-right {
     margin-top: $header-size;
     border-left: 1px solid $clr-gray3;
-    width: 195px;
+    max-width: 195px;
+    min-width: 195px;
     .events {
       border-right: 1px solid $clr-gray3;
       font-size: $font-sm;
