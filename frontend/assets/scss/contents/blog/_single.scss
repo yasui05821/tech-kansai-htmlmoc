@@ -108,7 +108,10 @@
     }
     .blog__strong {
       font-style: normal;
-      @include strong;
+      @include strong-bg;
+      display: inline-block;
+      padding: 0.1em 0.2em;
+      font-weight: normal;
     }
     .blog__list {
       margin-bottom: 2em;
